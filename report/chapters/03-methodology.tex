@@ -12,7 +12,7 @@ The semi-discrete equations of motion at time $t_n$ are expressed as:
 \end{equation}
 where $M$ is the diagonal (lumped) mass matrix, $\ddot{u}_n$ is the nodal acceleration vector, $F^{ext}_n$ represents external applied loads (including contact forces), and $F^{int}_n$ represents internal nodal forces.
 
-LS-DYNA employs a modified central difference time integration scheme (Leapfrog method) to advance the solution \cite{lsdyna2021}. The nodal velocities and displacements are updated according to:
+LS-DYNA employs a modified central difference time integration scheme (Leapfrog method) to advance the solution~\cite{lsdyna2021}. The nodal velocities and displacements are updated according to:
 \begin{equation}
     \dot{u}_{n+1/2} = \dot{u}_{n-1/2} + \ddot{u}_n \Delta t_n
 \end{equation}
@@ -22,7 +22,7 @@ LS-DYNA employs a modified central difference time integration scheme (Leapfrog 
 where $\Delta t_{n+1/2} = \frac{1}{2}(\Delta t_n + \Delta t_{n+1})$. This explicit approach allows for efficient processing of complex contact interactions between the rigid headform, the EPS liner, the polymer shell, and the rigid ceiling.
 
 \subsection{Stability and Time Step Control}
-The central difference method is conditionally stable. The time step $\Delta t$ is strictly limited by the Courant-Friedrichs-Lewy (CFL) condition \cite{belytschko2013}:
+The central difference method is conditionally stable. The time step $\Delta t$ is strictly limited by the Courant-Friedrichs-Lewy (CFL) condition~\cite{belytschko2013}:
 \begin{equation}
     \Delta t \leq \Delta t_{crit} = \frac{L_{min}}{c}
 \end{equation}
@@ -38,7 +38,7 @@ The helmet and the 5.0 kg spherical headform assembly were grouped and
 assigned a uniform upward initial velocity of 4.43 m/s. 
 
 According to classical mechanics, the laws of motion are invariant in all 
-inertial reference frames related by a constant velocity shift \cite{goldstein2002}. 
+inertial reference frames related by a constant velocity shift~\cite{goldstein2002}. 
 In explicit finite element analysis, this transformation is a standard 
 technique to isolate the impact event from free-flight processing time, 
 provided that the element formulations are objectively invariant 

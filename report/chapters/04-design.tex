@@ -36,7 +36,7 @@ impact standard.
 \end{figure}
 
 \section{Mesh Convergence Study}
-A mesh convergence study was performed on the Virgin HDPE baseline model to ensure that the results were independent of the spatial discretization. Five different element sizes were evaluated (6~mm, 5~mm, 4~mm, 3~mm, and 2~mm), with the peak equivalent stress monitored as the primary convergence metric. The model predominantly utilizes linear 4-node shell elements with Belytschko-Tsay integration and viscous hourglass control (Type 4) to maintain thermodynamic stability during the high-velocity impact \cite{belytschko2013, lsdyna2021}.
+A mesh convergence study was performed on the Virgin HDPE baseline model to ensure that the results were independent of the spatial discretization. Five different element sizes were evaluated (6~mm, 5~mm, 4~mm, 3~mm, and 2~mm), with the peak equivalent stress monitored as the primary convergence metric. The model predominantly utilizes linear 4-node shell elements with Belytschko-Tsay integration and viscous hourglass control (Type 4) to maintain thermodynamic stability during the high-velocity impact~\cite{belytschko2013, lsdyna2021}.
 
 As shown in Table~\ref{tab:mesh_convergence} and Figure~\ref{fig:convergence}, the maximum equivalent stress stabilized as the element size was reduced. The transition from 3~mm to 2~mm resulted in a change of 5.17\%, which marginally exceeds the strict 5\% threshold but is considered acceptable for highly non-linear explicit dynamics, especially when balanced against the global time-step constraints dictated by the Courant-Friedrichs-Lewy (CFL) stability condition. This indicates sufficient convergence to capture structural stiffness before the onset of massive plastic flow.
 
@@ -58,7 +58,7 @@ As shown in Table~\ref{tab:mesh_convergence} and Figure~\ref{fig:convergence}, t
     \end{tabularx}
 \end{table}
 
-The selection of a 2~mm element size was also governed by the Courant-Friedrichs-Lewy (CFL) stability condition (see Section 3.1.2), which dictates that the solver time-step ($\Delta t$) must not exceed the time taken for a pressure wave to cross the smallest element dimension ($L_{min}$) \cite{lsdyna2021}. The final model achieved a stable time-step of approx. $0.42~\mu s$. Validation of 0.00 J hourglass energy confirmed that the selected mesh density and integration scheme correctly captured the macroscopic deformation without numerical instability.
+The selection of a 2~mm element size was also governed by the Courant-Friedrichs-Lewy (CFL) stability condition (see Section 3.1.2), which dictates that the solver time-step ($\Delta t$) must not exceed the time taken for a pressure wave to cross the smallest element dimension ($L_{min}$)~\cite{lsdyna2021}. The final model achieved a stable time-step of approx. $0.42~\mu s$. Validation of 0.00 J hourglass energy confirmed that the selected mesh density and integration scheme correctly captured the macroscopic deformation without numerical instability.
 
 \begin{figure}[H]
     \centering
@@ -74,7 +74,7 @@ The selection of a 2~mm element size was also governed by the Courant-Friedrichs
     \label{fig:convergence}
 \end{figure}
 \subsection{Mesh Quality Metrics}
-To ensure the reliability of the explicit dynamics results, the mesh quality was audited against industry-standard metrics for skewness, orthogonal quality, and aspect ratio \cite{lsdyna2021}. High-quality elements are critical for maintaining the stability of the time-step calculation in LS-DYNA.
+To ensure the reliability of the explicit dynamics results, the mesh quality was audited against industry-standard metrics for skewness, orthogonal quality, and aspect ratio~\cite{lsdyna2021}. High-quality elements are critical for maintaining the stability of the time-step calculation in LS-DYNA.
 
 \begin{figure}[H]
     \centering
@@ -110,7 +110,7 @@ penetration while maintaining numerical stability. Friction was modelled
 using a Coulomb friction coefficient of $\mu = 0.3$ between the polymer shell 
 and the rigid headform, and $\mu = 0.5$ between the shell and the impacting 
 ceiling, consistent with standard polymer-on-metal contact mechanics in 
-crashworthiness simulations \cite{mishra2021}.
+crashworthiness simulations~\cite{mishra2021}.
 
 \section{Material Models and Test Matrix}
 Four distinct materials were evaluated. The baseline models applied 
@@ -121,8 +121,8 @@ simulations are summarized in Table~\ref{tab:material_props}.
 \begin{table}[H]
     \centering
     \caption{Material properties assigned to the helmet shell FEA models. 
-    Values for conventional materials sourced from \cite{cruz2023} and 
-    sustainable alternatives derived from \cite{chandramohan2015, yadav2024}.}
+    Values for conventional materials sourced from~\cite{cruz2023} and 
+    sustainable alternatives derived from~\cite{chandramohan2015, yadav2024}.}
     \label{tab:material_props}
     \begin{tabularx}{\textwidth}{L C C C C C L}
         \toprule
@@ -149,7 +149,7 @@ To determine the EN 397 regulatory compliance, the transmitted force ($F_t$) was
 \begin{equation}
     F_t = m_{hf} \cdot a_{filt}
 \end{equation}
-where $m_{hf}$ represents the standardized headform mass (5.0~kg) and $a_{filt}$ is the nodal acceleration signal after the application of the SAE J211 CFC 60 low-pass filter \cite{sae1995}.
+where $m_{hf}$ represents the standardized headform mass (5.0~kg) and $a_{filt}$ is the nodal acceleration signal after the application of the SAE J211 CFC 60 low-pass filter~\cite{sae1995}.
 
 
 The raw nodal acceleration outputs were processed in Python. The 4-pole 

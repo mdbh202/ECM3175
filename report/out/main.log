@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.16)  22 APR 2026 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.16)  22 APR 2026 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1610,18 +1610,14 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A6EFBB8F70C171F6DBEDDD67F100C793;8659.
  ) 
 Here is how much of TeX's memory you used:
- 34734 strings out of 467525
- 695069 string characters out of 5418982
- 1074669 words of memory out of 5000000
- 62897 multiletter control sequences out of 15000+600000
+ 34735 strings out of 467525
+ 695085 string characters out of 5418982
+ 1073669 words of memory out of 5000000
+ 62898 multiletter control sequences out of 15000+600000
  700685 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,108p,1193b,1170s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1636,7 +1632,7 @@ e1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
 ic/newtx/ztmb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/
 ztmbi.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on out/main.pdf (28 pages, 2586581 bytes).
+Output written on out/main.pdf (28 pages, 2586586 bytes).
 PDF statistics:
  819 PDF objects out of 1000 (max. 8388607)
  520 compressed objects within 6 object streams
