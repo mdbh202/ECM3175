@@ -57,23 +57,46 @@
   {\rmfamily\fontsize{12}{18}\bfseries\itshape\selectfont}{\thesubsection}{0.76cm}{}
 \titlespacing*{\subsection}{0.63cm}{6pt}{6pt}
 
-% TOC Formatting
+% TOC/LOF/LOT Formatting
 \renewcommand{\cfttoctitlefont}{\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}
+\renewcommand{\cftloftitlefont}{\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}
+\renewcommand{\cftlottitlefont}{\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}
+
 \setlength{\cftbeforetoctitleskip}{12pt}
 \setlength{\cftaftertoctitleskip}{0pt}
-\setlength{\cftparskip}{10pt} % Paragraph spacing 10pt after for TOC entries
+\setlength{\cftbeforeloftitleskip}{12pt}
+\setlength{\cftafterloftitleskip}{0pt}
+\setlength{\cftbeforelottitleskip}{12pt}
+\setlength{\cftafterlottitleskip}{0pt}
+
+\setlength{\cftparskip}{10pt} % Paragraph spacing 10pt after for entries
+
+% Entry fonts for TOC
 \renewcommand{\cftchapfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
 \renewcommand{\cftchappagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
-\renewcommand{\cftchapaftersnumb}{.} % Add dot after chapter number in TOC
+\renewcommand{\cftchapaftersnumb}{.} 
 \renewcommand{\cftsecfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
 \renewcommand{\cftsecpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
-\renewcommand{\cftsecaftersnumb}{.} % Add dot after section number in TOC
+\renewcommand{\cftsecaftersnumb}{.} 
 \renewcommand{\cftsubsecfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
 \renewcommand{\cftsubsecpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
-\renewcommand{\cftsubsecaftersnumb}{.} % Add dot after subsection number in TOC
+\renewcommand{\cftsubsecaftersnumb}{.} 
+
+% Entry fonts for LOF
+\renewcommand{\cftfigfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftfigpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftfigaftersnumb}{.}
+
+% Entry fonts for LOT
+\renewcommand{\cfttabfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cfttabpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cfttabaftersnumb}{.}
+
 \cftsetindents{chapter}{0cm}{1.5em}
 \cftsetindents{section}{0cm}{2.3em}
 \cftsetindents{subsection}{0.39cm}{3.2em}
+\cftsetindents{figure}{0cm}{2.3em}
+\cftsetindents{table}{0cm}{2.3em}
 
 \graphicspath{{figures/}}
 
