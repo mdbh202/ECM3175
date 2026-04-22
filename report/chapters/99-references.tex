@@ -1,5 +1,6 @@
 \begingroup
 % Redefine chapter format to match the rest of the document (16pt Arial Bold)
+% This ensures 'References' aligns with 'Abstract' and other headings at 0pt indent.
 \titleformat{\chapter}[hang]
   {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{}{0pt}{}
 \titlespacing*{\chapter}{0pt}{-20pt}{12pt}
@@ -10,15 +11,19 @@
 \setstretch{1.0}
 \rmfamily\fontsize{10}{12}\selectfont
 
-% Adjust the bibliography list parameters to align with the heading
-% Hanging indent where the number [1] starts at 0pt
+% Adjust the bibliography list parameters
+% 1. Use 0.63cm leftmargin to align the body text with the document's structure
+% 2. Set labelwidth and labelsep so that the label box ends at leftmargin
+% 3. This ensures the '[' of '[1]' starts exactly at the 0pt margin.
 \let\oldthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
   \oldthebibliography{#1}
   \setlength{\parskip}{0pt}
   \setlength{\itemsep}{6pt}
-  \setlength{\leftmargin}{0.63cm}
-  \setlength{\itemindent}{-0.63cm}
+  \setlength{\leftmargin}{0.63cm} 
+  \setlength{\labelwidth}{0.50cm} % Space for [XX]
+  \setlength{\labelsep}{0.13cm}  % Gap between number and text (0.63 - 0.50)
+  \setlength{\itemindent}{0pt}   % Ensure no negative pulling into the margin
 }
 
 \bibliographystyle{unsrt}
