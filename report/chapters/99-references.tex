@@ -1,0 +1,26 @@
+\begingroup
+% Redefine chapter format specifically for References to be Arial Bold 18pt
+\titleformat{\chapter}[display]
+  {\fontfamily{phv}\fontsize{18}{20.7}\bfseries\selectfont}{}{0pt}{\fontsize{18}{20.7}\selectfont}
+\titlespacing*{\chapter}{0pt}{12pt}{12pt}
+
+\renewcommand{\bibname}{References}
+
+% Set Times New Roman 10pt, line spacing 1
+\setstretch{1.0}
+\rmfamily\fontsize{10}{12}\selectfont
+
+% Adjust the bibliography list parameters for hanging indent 0.76cm and 0 spacing
+\let\oldthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \oldthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt}
+  \setlength{\leftmargin}{0.76cm}
+  \setlength{\itemindent}{-0.76cm}
+}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\addcontentsline{toc}{chapter}{References}
+\endgroup

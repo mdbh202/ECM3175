@@ -1,0 +1,173 @@
+\chapter{Management, Sustainability, and Safety}
+
+\section{Project Management}
+Project management balanced the computational demands of LS-DYNA simulations with the analytical requirements of the BEng dissertation. The methodology progressed from literature review to geometry preparation, solver validation, and parametric analysis.
+
+A Gantt chart (Figure~\ref{fig:gantt}) tracked the project timeline and milestones, including the preliminary report and core parametric simulations. Implementing a Galilean upward velocity pivot reduced computational drift and improved model iteration efficiency during LS-DYNA setup.
+
+\begin{landscape}
+\begin{figure}[H]
+    \centering
+    \begin{ganttchart}[
+        canvas/.append style={fill=none, draw=black!40, line width=.75pt},
+        hgrid={*1{black!5, solid}},
+        vgrid={*7{black!10, dotted}, *1{black!60, solid}},
+        x unit=0.75mm,
+        y unit title=0.7cm,
+        y unit chart=0.55cm,
+        time slot format=isodate,
+        title/.style={draw=none, fill=gray!15},
+        title label font=\footnotesize\bfseries,
+        bar/.append style={fill=blue!40!gray!60, draw=blue!40!black!80, line width=0.4pt},
+        bar height=0.65,
+        group/.append style={fill=black!15, draw=black!60, line width=0.8pt},
+        group height=0.25,
+        group right shift=0,
+        group top shift=0.6,
+        group peaks tip position=0,
+        milestone/.append style={fill=red!70!black, draw=red!70!black, shape=diamond},
+        link/.style={-latex, line width=0.5pt, black!50},
+        bar label font=\scriptsize\color{black!90},
+        group label font=\scriptsize\bfseries,
+        milestone label font=\scriptsize\itshape\color{red!40!black},
+        include title in canvas=false
+    ]{2025-10-01}{2026-05-31}
+        \gantttitlecalendar{year, month} \\
+        
+        % 1: RESEARCH
+        \ganttgroup{1: Research \& Technical Initiation}{2025-10-01}{2025-11-30} \\
+        \ganttbar[name=lit]{Literature Review \& Standards Audit}{2025-10-01}{2025-10-31} \\
+        \ganttbar[name=mat]{Material Property Database Compilation}{2025-11-01}{2025-11-30} \\
+        \ganttmilestone[name=m1]{PRELIMINARY REPORT SUBMISSION}{2025-11-20} \\
+
+        % 2: FEA ARCHITECTURE
+        \ganttgroup{2: LS-DYNA Model Development}{2025-12-01}{2026-02-10} \\
+        \ganttbar[name=cad]{3D CAD Geometry Preparation}{2025-12-01}{2025-12-14} \\
+        \ganttbar[name=break, bar/.append style={fill=gray!20, draw=black!30, dashed}]{WINTER BREAK}{2025-12-15}{2026-01-12} \\
+        \ganttbar[name=mesh]{Mesh Sensitivity \& Convergence Study}{2026-01-13}{2026-01-28} \\
+        \ganttbar[name=solver]{Solver Tuning \& BC Setup}{2026-01-29}{2026-02-10} \\
+
+        % 3: PARAMETRIC EXECUTION
+        \ganttgroup{3: Multi-Material Impact Simulations}{2026-02-11}{2026-03-20} \\
+        \ganttbar[name=base]{Baseline Execution: Virgin HDPE \& ABS}{2026-02-11}{2026-02-25} \\
+        \ganttbar[name=sus1]{Sustainable Model 1: Bamboo-HDPE}{2026-02-26}{2026-03-10} \\
+        \ganttbar[name=sus2]{Sustainable Model 2: Recycled PC}{2026-03-11}{2026-03-20} \\
+
+        % 4: ANALYTICS
+        \ganttgroup{4: Post-Processing \& Assessment}{2026-03-21}{2026-04-15} \\
+        \ganttbar[name=signal]{SAE J211 Signal Processing \& Filtering}{2026-03-21}{2026-04-05} \\
+        \ganttbar[name=lca]{Indicative Life Cycle Assessment (LCA)}{2026-04-06}{2026-04-15} \\
+
+        % 5: THESIS
+        \ganttgroup{5: Final Thesis Compilation \& Audit}{2026-01-12}{2026-05-01} \\
+        \ganttbar[name=write]{Writing Intro, Lit Review \& Methodology}{2026-01-12}{2026-03-20} \\
+        \ganttbar[name=res]{Synthesis of Results \& Discussion}{2026-03-21}{2026-04-15} \\
+        \ganttbar[name=final]{Final Review, Audit \& Formatting}{2026-04-16}{2026-05-01} \\
+        \ganttmilestone[name=m3]{FINAL DISSERTATION SUBMISSION}{2026-05-01} \\
+
+        % Dependencies (Logical Links)
+        \ganttlink{lit}{m1}
+        \ganttlink{lit}{write}
+        \ganttlink{cad}{break}
+        \ganttlink{break}{mesh}
+        \ganttlink{mesh}{solver}
+        \ganttlink{solver}{write}
+        \ganttlink{solver}{base}
+        \ganttlink{sus2}{signal}
+        \ganttlink{signal}{res}
+        \ganttlink{res}{final}
+        \ganttlink{final}{m3}
+    \end{ganttchart}
+    \caption{Detailed Project Gantt Chart (Oct 2025 -- May 2026) demonstrating the engineering workflow, task dependencies, and the integrated Winter Break period.}
+    \label{fig:gantt}
+\end{figure}
+\end{landscape}
+
+\section{Sustainability and Life Cycle Considerations}
+
+The mechanical viability of sustainable materials must be balanced against 
+their environmental footprint. Table~\ref{tab:lca} provides an indicative 
+lifecycle assessment (LCA) comparison based on literature data \cite{yadav2024, alvarez2022}.
+
+\begin{table}[H]
+    \centering
+    \caption{Indicative Lifecycle Assessment (LCA) comparison of helmet 
+    shell materials. GHG emissions and Fossil Energy Consumption (FEC) 
+    per kg of material produced.}
+    \label{tab:lca}
+    \begin{tabularx}{\textwidth}{>{\hsize=1.3\hsize}L C C C}
+        \toprule
+        \textbf{Material} & \makecell[c]{\textbf{GHG Emissions}\\\small(kg CO$_2$e/kg)} & \makecell[c]{\textbf{FEC}\\\small(MJ/kg)} & \textbf{Recyclability} \\
+        \midrule
+        Virgin HDPE & 1.9 & 70 & High \\
+        ABS Plastic & 2.1 & 80 & High \\
+        Bio-PE (Bio-based) & 1.0 & 29 & High \\
+        Recycled PC & 0.4 & 20 & High \\
+        Natural Fibre/HDPE & 1.3 & 40 & Moderate \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+Recycled PC reduces GHG emissions by 80\% and fossil energy consumption (FEC) by 75\% compared to virgin ABS. The 4.54 kN transmitted force (Section 5.2) confirms its standard compliance. These metrics demonstrate that high-modulus recycled polymers provide equivalent protection while lowering carbon footprint. The Bamboo-HDPE 30\% wt composite achieves a 31\% GHG reduction and transmitted 4.51 kN, performing comparably to virgin HDPE. Substituting virgin polymers with recycled or composite alternatives thus reduces global warming potential (GWP) without compromising safety.
+
+While Bamboo-HDPE reduces virgin plastic 
+volume, its end-of-life recyclability is categorized as moderate due to the 
+potential for natural fibre contamination in municipal recycling streams.
+
+\section{Health and Safety}
+Sustainable PPE improves occupational safety by maintaining standard-compliant impact protection while reducing environmental footprint. This study establishes that recycled and bio-based polymers fulfill EN 397 safety-critical requirements ($<$5.0 kN). The 30\% bamboo fraction also lowers total helmet mass, providing ergonomic benefits such as reduced neck strain and musculoskeletal fatigue for workers during extended shifts.
+
+
+The computational nature of this project presents distinct health and 
+safety considerations. Prolonged periods of VDU (Visual Display Unit) use 
+during LS-DYNA model setup and post-processing pose risks of eye strain and 
+repetitive strain injury (RSI). These risks were mitigated through regular 
+breaks and the use of an ergonomic workstation, in accordance with the 
+University of Exeter's safety guidelines for desk-based research.
+
+\section{Ethical Considerations}
+The ethical conduct of this project was guided by the University of Exeter's 
+research ethics framework and the professional code of conduct of the 
+Institution of Mechanical Engineers (IMechE). Ethical considerations focused 
+primarily on the handling of academic data and the potential impact of safety 
+simulation outcomes. The project ensured data integrity by using verified 
+material property sets and avoiding any selective reporting of negative 
+simulation results. From a societal perspective, the substitution of 
+petroleum-derived polymers with sustainable alternatives was assessed for its 
+potential to provide equivalent, rather than inferior, protection to the end 
+user, fulfilling the engineer's ethical duty to prioritize public safety.
+
+\section{Commercial and Intellectual Property Considerations}
+This project has substantial commercial potential for the PPE industry. The 
+successful adoption of recycled or composite materials requires that they remain 
+cost-competitive with virgin polymers. While raw material costs for recycled PC 
+are currently lower than virgin ABS, the specialized processing requirements 
+for high-performance safety gear may introduce additional overhead. 
+
+Regarding Intellectual Property (IP), the unique FEA assembly and simulation 
+methodology developed in this study, specifically the rotational kinematics 
+optimization for 30$^\circ$ oblique impacts, represents potentially 
+patentable IP if integrated into a broader helmet design workflow. Any 
+commercialization of these findings would need to comply with the existing IP 
+environment of existing helmet shell patents while ensuring that 
+safety-critical data remains accessible to regulatory bodies.
+
+\section{Project Risk Register}
+A systematic risk assessment was conducted to identify and mitigate potential 
+threats to project completion.
+
+\begin{table}[H]
+    \centering
+    \caption{Project Risk Register detailing technical and operational risks associated with the FEA dissertation lifecycle.}
+    \label{tab:risk_register}
+    \begin{tabularx}{\textwidth}{>{\hsize=0.6\hsize}L c c >{\hsize=1.4\hsize}L}
+        \toprule
+        \textbf{Risk Event} & \textbf{Prob.} & \textbf{Impact} & \textbf{Mitigation Strategy} \\
+        \midrule
+        Simulation Divergence & Moderate & High & Implementation of Galilean upward velocity shift to stabilize contact interfaces. \\
+        Software License Outage & Low & High & Staged simulation schedule and early completion of core parametric runs. \\
+        Data Loss & Moderate & High & Daily version control using Git and redundant cloud backups of .k and .xlsx files. \\
+        Hardware Failure & Low & Mod. & Use of remote high-performance computing (HPC) resources for final runs. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

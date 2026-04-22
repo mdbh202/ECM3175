@@ -1,0 +1,77 @@
+\chapter{Literature Review}
+
+\section{Impact Stress Distribution and Mechanics}
+Impact stress analysis on construction helmet shells is a critical engineering 
+domain. Under EN 397 conditions, shells experience peak stresses concentrated 
+at the dome apex. According to Long et al. \cite{long2015}, finite element 
+models applying explicit solvers are effective at mapping these transient 
+loads. However, a primary limitation in such models is the frequent 
+adoption of simplified linear elastic material assumptions for the underlying 
+foam liners, which may fail to capture the energy dissipation associated with 
+non-linear cell crushing. Research indicates that standard HDPE shells 
+experience peak stresses of 2.55--3.57 kg/mm$^2$ with moderate deformation, while ABS 
+shells undergo peak stresses of 3.06--4.59 kg/mm$^2$ due to their higher stiffness.
+
+While Wu et al. \cite{wu2022} report that helmet shells remain primarily 
+within elastic deformation limits (strains of 4\%--6.3\%), there is 
+substantial uncertainty regarding material response under high-strain-rate 
+impact loading. Specifically, the energy absorption capacity is fundamentally 
+dictated by the material's elastic modulus; however, the transition from 
+structural yielding in ductile materials to load distribution in stiff 
+materials is often treated as a binary mechanism. This study identifies a 
+critical gap in understanding how this transition influences transmitted 
+impulse when sustainable, non-conventional polymers are introduced.
+
+\section{Conventional Material Properties}
+Conventional materials have dictated helmet design for decades, yet their 
+comparative performance under varying impact velocities remains under-scrutinised.
+\begin{itemize}
+    \item \textbf{HDPE:} Widely used due to its semi-rigid nature and high 
+    ductility. While industrial data suggests a yield strength of 
+    approx.\ 2.55 kg/mm$^2$ \cite{cruz2023}, academic studies often 
+    report conflicting results depending on the molecular weight and 
+    processing conditions, indicating that standard HDPE performance may 
+    vary measurably in field applications.
+    \item \textbf{ABS:} Known for exceptional rigidity and tensile strength 
+    (4.08--5.10 kg/mm$^2$). While Author A reports high energy absorption 
+    in HDPE, Author B suggests reduced performance under transient loading, 
+    indicating uncertainty in how flexural modulus (approx. 214.14 kg/mm$^2$) 
+    interacts with the localized buckling resistance required for 
+    EN 397 compliance.
+\end{itemize}
+
+\section{Sustainable and Environmentally Friendly Materials}
+Environmental sustainability considerations are driving helmet material 
+innovation, but existing research is primarily restricted to 
+quasi-static contexts, which fail to represent the high-strain-rate 
+environment of an industrial impact.
+\begin{itemize}
+    \item \textbf{Bio-Based Polymers:} Materials such as Bio-PE offer 
+    potential impact resistance equivalent to fossil-derived PE \cite{alvarez2022}. 
+    However, the lack of documented high-velocity impact data for these 
+    renewable biomass feedstocks represents a major hurdle for regulatory 
+    acceptance in safety-critical PPE.
+    \item \textbf{Natural Fibre Composites:} Integrating bamboo or coir 
+    fibres into thermoplastic matrices increases tensile strength 
+    \cite{obele2015, chandramohan2015}. Research by Chen et al. \cite{chen2020} 
+    suggests 10\% fibre loading is optimal; however, their study 
+    focuses on tensile rather than impact dynamics. The structural 
+    viability of higher loadings (up to 30\%) remains contested, 
+    particularly regarding the interfacial bonding required to maintain 
+    integrity under transient EN 397 loads.
+    \item \textbf{Recycled Polycarbonate (rPC):} Studies indicate that rPC 
+    can maintain performance parity with virgin filaments \cite{baechler2013}. 
+    However, these studies often overlook the effects of polymer 
+    degradation during multiple recycling cycles, which can induce 
+    brittleness. While its extreme rigidity promotes reduced tangential 
+    frictional interaction \cite{mills2011}, the potential for catastrophic 
+    brittle fracture under peak EN 397 loads remains an unaddressed risk 
+    in current literature.
+\end{itemize}
+
+While explicit FEA has benchmarked conventional safety helmets \cite{long2015, wu2022}, 
+sustainable alternatives lack a validated high-velocity performance baseline. 
+This investigation addresses this critical deficiency by establishing a 
+comparative framework to quantify their kinetics and regulatory compliance 
+under EN 397 transient loading, explicitly accounting for the uncertainties 
+identified in existing literature.

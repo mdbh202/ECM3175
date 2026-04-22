@@ -1,0 +1,12 @@
+﻿# 
+# 02/10/2026 16:16:24
+# The parameters defined in the project are:
+# ,P4 - Face Sizing Element Size [mm],P2 - Equivalent Stress 4 Maximum [MPa],P3 - Total Deformation 2 Maximum [mm]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P4,P2,P3
+DP 0,6,23.488135080576459,44.016861359124547
+DP 1,5,23.366374834456121,40.366520605492731
+DP 2,4,22.957419754064645,42.6259654663635
+DP 3,3,19.715584233213203,51.564283891937869
+DP 4,2,20.737961502842705,44.1428713048227

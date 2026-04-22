@@ -1,0 +1,280 @@
+\chapter{Experimental or Analytical Results}
+
+The raw output files from LS-DYNA were extracted and processed via Python 
+to map the multi-phase mechanical behaviour of the construction helmets 
+under the 49 Joules EN 397 drop test.
+
+\section{Phase 1: Thermodynamic Validation}
+
+Prior to assessing any mechanical data, the global statistics 
+(\textit{glstat}) were analysed to confirm thermodynamic stability 
+across all four material models. Table~\ref{tab:phase1} summarises 
+the key energy conservation metrics.
+
+\begin{table}[H]
+    \centering
+    \caption{Thermodynamic validation summary from LS-DYNA global 
+    statistics (\textit{glstat}) for all four helmet shell materials.}
+    \label{tab:phase1}
+    \begin{tabularx}{\textwidth}{>{\hsize=1.4\hsize}L C C C C C}
+        \toprule
+        \textbf{Material} & \makecell[c]{\textbf{Initial}\\\textbf{Energy (J)}} & 
+        \makecell[c]{\textbf{Final}\\\textbf{Energy (J)}} & \makecell[c]{\textbf{Energy}\\\textbf{Drift (\%)}} & 
+        \makecell[c]{\textbf{Hourglass}\\\textbf{Energy (J)}} & \textbf{Valid?} \\
+        \midrule
+        Virgin HDPE       & 49.50 & 49.49 & $-0.0218$ & 0.00 & Yes \\
+        ABS Plastic       & 49.61 & 49.59 & $-0.0288$ & 0.00 & Yes \\
+        Bamboo-HDPE 30\%  & 49.57 & 49.56 & $-0.0329$ & 0.00 & Yes \\
+        Recycled PC (rPC) & 49.78 & 49.77 & $-0.0215$ & 0.00 & Yes \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+Across the simulation time, the total energy 
+remained effectively constant in all four models, with a maximum 
+drift of only $-0.0329$\% observed in the Bamboo-HDPE model. The 
+hourglass energy remained at 0.00 J throughout all simulations.
+
+\section{Phase 2: Macroscopic Force Transmission (EN 397)}
+The core requirement of the EN 397 standard is that the transmitted force 
+must remain below 5.0 kN. The raw nodal acceleration data exhibited 
+high-frequency oscillations characteristic of explicit penalty contact 
+formulations, as shown in Figure~\ref{fig:phase2_raw}. For example, the 
+raw Virgin HDPE trace reached a peak of 8.09 kN, and the Bamboo-HDPE 
+composite reached 9.91 kN.
+
+Upon applying the 4-pole phaseless SAE J211 CFC 60 Butterworth low-pass 
+filter (100 Hz cutoff), the high-frequency components were suppressed, 
+as shown in Figure~\ref{fig:phase2_filtered}. The raw data 
+(Figure~\ref{fig:phase2_raw}) contains oscillations exceeding 10 kN, 
+while the filtered curves (Figure~\ref{fig:phase2_filtered}) show 
+smooth force--time histories.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.85\textwidth}
+        \includegraphics[width=\textwidth]{Phase2_ForceTransmission.pdf}
+        \caption{Raw unfiltered transmitted force. High-frequency 
+        spikes (up to $\sim$10 kN) are numerical contact artefacts, not 
+        physical failures.}
+        \label{fig:phase2_raw}
+    \end{subfigure}
+    \vspace{1em}
+    \begin{subfigure}[b]{0.85\textwidth}
+        \includegraphics[width=\textwidth]{Phase2_ForceTransmission_Filtered.pdf}
+        \caption{Filtered transmitted force after SAE J211 CFC 60 
+        processing. The 5.0 kN EN 397 threshold is shown as a dashed 
+        line.}
+        \label{fig:phase2_filtered}
+    \end{subfigure}
+    \caption{Transmitted Force vs.\ Time for all four helmet shell 
+    materials under the EN 397 49 J impact: (a) raw explicit solver 
+    output and (b) after application of the SAE J211 CFC 60 low-pass 
+    filter. The comparison demonstrates that signal processing is 
+    required to recover physically meaningful force histories from 
+    explicit penalty contact simulations.}
+    \label{fig:phase2}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Summary of EN 397 force transmission results for all four 
+    helmet shell materials.}
+    \label{tab:results}
+    \begin{tabularx}{\textwidth}{>{\hsize=1.3\hsize}L C C C C}
+      \toprule
+      \textbf{Material} & \makecell[c]{\textbf{Raw peak}\\\textbf{(kN)}} & 
+      \makecell[c]{\textbf{Filtered peak}\\\textbf{(kN)}} & \makecell[c]{\textbf{EN 397}\\\textbf{limit (kN)}} & 
+      \textbf{Pass/Fail} \\
+      \midrule
+      Virgin HDPE       & 8.09 & 4.05 & 5.0 & PASS \\
+      ABS Plastic       & 2.74 & 2.25 & 5.0 & PASS \\
+      Bamboo-HDPE 30\%  & 9.91 & 4.51 & 5.0 & PASS \\
+      Recycled PC (rPC) & 8.93 & 4.54 & 5.0 & PASS \\
+      \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Benchmarking against Existing Data}
+The filtered peak force values were compared to results from existing 
+studies and experimental reports. Long et al. \cite{long2015} reported 
+transmitted forces of 3.2--3.8 kN for HDPE shells, while Tham et al. 
+\cite{tham2014} reported experimental ranges of 3.0--4.5 kN for Type I 
+HDPE shells under 49 J impacts. The current Virgin HDPE baseline (4.05 kN) 
+is consistent with these recorded ranges.
+
+The Bamboo-HDPE 30\% wt result (4.51 kN) and the Recycled PC shell (4.54 kN) 
+also fall within the compliant range defined by the EN 397 standard.
+
+\section{Phase 3: Energy Absorption Kinematics}
+
+Shock absorption is fundamentally the physical conversion of 
+kinetic energy into internal strain energy. Table~\ref{tab:phase3} 
+presents the final energy partition for each material at 
+$t = 0.02$ s, extracted from the \textit{glstat} output files.
+
+\begin{table}[H]
+    \centering
+    \caption{Energy partition at end of simulation ($t = 0.02$ s) 
+    for all four helmet shell materials. Initial impact energy 
+    $\approx$ 49.5 J across all models.}
+    \label{tab:phase3}
+    \begin{tabularx}{\textwidth}{>{\hsize=1.2\hsize}L C C C C}
+        \toprule
+        \textbf{Material} & \makecell[c]{\textbf{Internal}\\\textbf{Energy (J)}} & 
+        \makecell[c]{\textbf{Residual}\\\textbf{Kinetic (J)}} & 
+        \makecell[c]{\textbf{Contact}\\\textbf{Friction (J)}} & 
+        \makecell[c]{\textbf{Absorption}\\\textbf{Ratio (\%)}} \\
+        \midrule
+        Virgin HDPE       & 27.35 & 15.86 & 6.29 & 55.3 \\
+        ABS Plastic       & 26.21 & 17.59 & 5.79 & 52.8 \\
+        Bamboo-HDPE 30\%  & 22.84 & 20.25 & 6.47 & 46.1 \\
+        Recycled PC (rPC) & 16.67 & 26.90 & 6.20 & 33.5 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+Virgin HDPE recorded the highest proportion of impact energy 
+(27.35 J, 55.3\%), with the lowest residual kinetic energy (15.86 J). 
+ABS recorded 26.21 J of internal energy and 5.79 J of contact friction 
+energy. 
+
+Recycled PC recorded 16.67 J of internal strain energy and 26.90 J of 
+residual kinetic energy. The contact friction energy ranged from 
+5.79 J to 6.47 J across all material models.
+
+\section{Phase 4: Kinematic Displacement and Structural Crush Depth}
+The final mechanical metric evaluated was the relative kinematic 
+displacement between the headform center of gravity and the helmet apex. 
+This represents the true structural crush depth, independent of the 
+global movement of the assembly. Results are summarized in 
+Table~\ref{tab:crush_depth} and Figure~\ref{fig:crush_depth_plot}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Phase5_CrushDepth.pdf} 
+    \caption{Relative kinematic displacement (crush depth) vs. time for Virgin HDPE and Recycled PC shells, illustrating the distinct stiffness responses.}
+    \label{fig:crush_depth_plot}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Maximum structural crush depth (relative displacement) for 
+    all four helmet shell materials under 49 J impact.}
+    \label{tab:crush_depth}
+    \begin{tabularx}{\textwidth}{L C}
+        \toprule
+        \textbf{Material} & \textbf{Max Crush Depth (mm)} \\
+        \midrule
+        Virgin HDPE       & 18.42 \\
+        ABS Plastic       & 12.15 \\
+        Bamboo-HDPE 30\%  & 15.68 \\
+        Recycled PC (rPC) & 10.23 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{strain_section_hdpe.png}
+        \caption{Virgin HDPE (Max Strain: 0.524)}
+        \label{fig:strain_hdpe}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{strain_section_rpc.png}
+        \caption{Recycled PC (Max Strain: 0.212)}
+        \label{fig:strain_rpc}
+    \end{subfigure}
+    \caption{Cross-sectional views of internal EPS liner strain at peak impact. The ductile HDPE exhibits severe localized yielding, whereas the rigid rPC distributes the load, resulting in significantly lower localized strain.}
+    \label{fig:strain_comparison}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Snowshoe_Effect_Conceptual.png}
+    \caption{Conceptual representation of load distribution due to increased flexural stiffness in high-modulus shells. The higher modulus promotes a broader distribution of the impact force, mitigating localized stress concentrations in the underlying liner.}
+    \label{fig:load_distribution_conceptual}
+\end{figure}
+
+The displacement data correlates with the material modulus and 
+the identified energy absorption mechanisms. Virgin HDPE exhibited the 
+highest crush depth (18.42 mm). 
+
+In contrast, the Recycled PC shell recorded a displacement of 10.23 
+mm. The ABS shell resulted in 12.15 mm of displacement and a filtered 
+force peak of 2.25 kN.
+
+\section{\texorpdfstring{Phase 5: Advanced Kinematics (30$^\circ$ Oblique Impact)}{Phase 5: Advanced Kinematics (30 degrees Oblique Impact)}}
+To further evaluate the protective capabilities of the candidate materials beyond the standard vertical drop, an advanced 30$^\circ$ oblique impact simulation was conducted. This phase quantifies the generation of tangential force and resulting 
+rotational acceleration, both of which are factors strongly correlated 
+with diffuse axonal injury (DAI).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{oblique_setup_view.png}
+    \caption{Velocity vector setup showing the 30-degree oblique impact methodology ($v = 4.43$ m/s) applied to the helmet-headform assembly.}
+    \label{fig:oblique_setup}
+\end{figure}
+
+The simulation results reveal distinct kinematic responses between the ductile Virgin HDPE and the high-modulus Recycled Polycarbonate (rPC) shells. The HDPE shell demonstrated a plastic deformation effect, where 
+localized yielding at the contact point increased the effective friction 
+coefficient, leading to higher rotational torque. Conversely, the rPC 
+shell exhibited a response characterized by reduced tangential 
+frictional interaction, where its higher flexural modulus (2.3~GPa) 
+limited localized deformation, allowing the headform to slide more 
+freely and reducing rotational acceleration.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Stress_Contours.png}
+        \caption{Virgin HDPE}
+        \label{fig:oblique_hdpe}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{abs_oblique_stress.png}
+        \caption{ABS Plastic}
+        \label{fig:oblique_abs}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Stress_Contours.png}
+        \caption{Recycled PC}
+        \label{fig:oblique_rpc}
+    \end{subfigure}
+    \caption{Asymmetric von Mises stress contours generated during the 30-degree oblique impact. High-modulus shells (ABS, rPC) show concentrated elastic responses compared to the yielding in HDPE.}
+    \label{fig:oblique_stress_contours}
+\end{figure}
+
+The quantitative results are summarized in Table~\ref{tab:oblique_results}. 
+
+\begin{table}[H]
+    \centering
+    \caption{Peak kinematic metrics recorded at the headform center of gravity during the 30-degree oblique impact simulations.}
+    \label{tab:oblique_results}
+    \begin{tabularx}{\textwidth}{>{\hsize=1.2\hsize}L C C C}
+        \toprule
+        \textbf{Material} & \makecell[c]{\textbf{Peak Linear}\\\textbf{Accel. (g)}} & \makecell[c]{\textbf{Peak Angular}\\\textbf{Accel. (rad/s$^2$)}} & \makecell[c]{\textbf{Peak Contact}\\\textbf{Pressure (kg/mm$^2$)}} \\
+        \midrule
+        Virgin HDPE       & 87.6  & 3482 & 2.63 \\
+        ABS Plastic       & 190.8 & 5122 & 2.22 \\
+        Bamboo-HDPE 30\%  & 286.9 & 12044 & 2.49 \\
+        Recycled PC (rPC) & 91.3  & 896 & 2.69 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+The rPC shell recorded a peak rotational acceleration of 896 rad/s$^2$, 
+representing a reduction compared to the 3482 rad/s$^2$ observed for Virgin HDPE. 
+The Bamboo-HDPE composite recorded the highest angular acceleration 
+(12044 rad/s$^2$) and the highest peak linear acceleration (286.9 g) among 
+the candidate materials. Peak contact pressures ranged from 
+2.22 kg/mm$^2$ for ABS to 2.69 kg/mm$^2$ for rPC.

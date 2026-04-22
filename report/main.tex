@@ -1,0 +1,112 @@
+\documentclass[11pt, a4paper]{report}
+
+% Essential Packages
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  margin=2.54cm,
+  headheight=14pt
+}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{tabularx} 
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{newtxtext,newtxmath} % Professional Times New Roman style
+\usepackage{tocloft} % For TOC formatting
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+
+% Adjust chapter title formatting to Arial equivalent (Helvetica)
+% Using 'hang' to keep it on one line as per template requirements for Abstract/TOC
+\titleformat{\chapter}[hang]
+  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{\thechapter}{0.63cm}{}
+\titleformat{name=\chapter,numberless}[hang]
+  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{}{0pt}{}
+\titlespacing*{\chapter}{0pt}{-20pt}{12pt}
+
+% Adjust Section/Subsection according to guidelines
+% Section: Arial Bold 16, 1.15 spacing, 12pt before/after, Indent 0 hanging 0.63cm
+\titleformat{\section}[hang]
+  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{\thesection}{0.63cm}{}
+\titlespacing*{\section}{0pt}{12pt}{12pt}
+
+% Subsection: Cambria Bold Italic 14, 1.5 spacing, 6pt before/after, Indent 0.63cm left hanging 0.76cm
+% Using Times New Roman equivalent for Cambria to keep serif consistency in pdfLaTeX
+\titleformat{\subsection}[hang]
+  {\rmfamily\fontsize{14}{21}\bfseries\itshape\selectfont}{\thesubsection}{0.76cm}{}
+\titlespacing*{\subsection}{0.63cm}{6pt}{6pt}
+
+% TOC Formatting
+\renewcommand{\cfttoctitlefont}{\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}
+\setlength{\cftbeforetoctitleskip}{12pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+\setlength{\cftparskip}{10pt} % Paragraph spacing 10pt after for TOC entries
+\renewcommand{\cftchapfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftchappagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftsecfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftsecpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftsubsecfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftsubsecpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\cftsetindents{chapter}{0cm}{1.5em}
+\cftsetindents{section}{0cm}{2.3em}
+\cftsetindents{subsection}{0.39cm}{3.2em}
+
+\graphicspath{{figures/}}
+
+% Academic Line Spacing (Text: 1.15)
+\setstretch{1.15}
+
+% Header and Footer setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{ECM3175 Final Report}
+
+\begin{document}
+
+% Front Matter (Title Pages)
+\input{chapters/front-matter}
+
+% Abstract and Tables
+\pagenumbering{roman}
+\input{chapters/00-abstract}
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\pagenumbering{arabic}
+
+% Main Chapters
+\input{chapters/01-introduction}
+\input{chapters/02-literature-review}
+\input{chapters/03-methodology}
+\input{chapters/04-design}
+\input{chapters/05-results}
+\input{chapters/06-discussion}
+\input{chapters/07-project-management}
+
+% References
+\input{chapters/99-references}
+
+\end{document}

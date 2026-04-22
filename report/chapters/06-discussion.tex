@@ -1,0 +1,114 @@
+\chapter{Discussion and Conclusions}
+
+\section{Synthesis of Results and Comparative Analysis}
+This investigation successfully established a transient performance baseline 
+for sustainable polymer alternatives under the EN 397 regulatory framework. 
+The transmitted force results (2.25--4.54 kN) indicate that all 
+candidate materials meet the primary safety criterion of < 5.0 kN. 
+
+The filtered Virgin HDPE baseline of 4.05 kN is consistent with 
+experimental ranges of 3.0--4.5 kN reported by Tham et al. \cite{tham2014} 
+and safety researchers for standard Type I shells. This alignment 
+suggests that the modeling of the shell geometry and contact 
+interactions is physically representative of the standard shock 
+absorption test. The slight elevation in peak force compared to 
+benchmark FEA studies by Long et al. \cite{long2015} (3.2--3.8 kN) 
+may be attributed to the rigid headform assumption, which neglects the 
+compliance of the EN 960 headform assembly, thereby providing a 
+conservative assessment of force transmission.
+
+\section{Energy Absorption and Protective Mechanisms}
+The results indicate two distinct mechanical strategies for impact 
+protection. The highly ductile Virgin HDPE neutralises impact energy 
+primarily through internal strain energy yielding (27.35 J). This 
+mechanism effectively extends the impact duration, thereby attenuating 
+the peak transmitted force. However, this ductile response is 
+associated with the highest structural crush depth (18.42 mm), which 
+limits the available suspension travel in high-velocity scenarios.
+
+Conversely, the high-modulus materials (ABS, rPC) protect the wearer 
+via load distribution due to increased flexural stiffness. By 
+distributing the impact force across a broader surface area of the 
+EPS liner, these materials transmit lower localised stress to the 
+shell structure. The superior performance of the ABS shell (2.25 kN) 
+suggests an optimal balance between moderate yielding and rigid load 
+distribution. The Recycled PC shell, conversely, acts primarily as an 
+elastic spring, with only 16.67 J absorbed as internal strain energy. 
+The high elastic rebound (54.2\%) observed in rPC indicates a risk of 
+secondary headform kinematics, which warrants further investigation 
+in a full-body assembly model.
+
+\section{Rotational Kinematics and Injury Risk Correlation}
+The 30$^\circ$ oblique impact simulations (Phase 5) suggest that 
+material modulus is a primary factor in rotational acceleration 
+generation. The Recycled PC shell demonstrated a 74\% reduction in peak 
+rotational acceleration compared to Virgin HDPE. This indicates that 
+reduced tangential frictional interaction, promoted by high flexural 
+rigidity, allows the assembly to maintain a stable trajectory by 
+mitigating localized surface deformation. 
+
+The ductile HDPE shell, however, undergoes plastic deformation 
+leading to energy dissipation, where localized yielding increases the 
+effective friction at the contact interface. This results in higher 
+rotational torque, which is associated with an increased risk of 
+Diffuse Axonal Injury (DAI) \cite{mills2011}. The extreme rotational 
+acceleration recorded for the Bamboo-HDPE composite (12044 rad/s$^2$) 
+suggests that the presence of stiff fibres in a ductile matrix may 
+artificially increase surface 'grab' without providing the bulk 
+rigidity required to promote a low-friction response. 
+
+\section{Discussion of Limitations and Validation Confidence}
+\label{sec:limitations}
+
+The following limitations are inherent to the modelling assumptions. The 
+overall validation confidence is considered high for relative material 
+ranking, though absolute magnitudes are subject to the following 
+uncertainties:
+\begin{itemize}
+    \item \textbf{Isotropic assumption for Bamboo-HDPE.} The 
+    isotropic modelling of the 30\% wt composite likely overestimates 
+    stiffness in transverse directions. This may lead to a marginal 
+    underestimation of peak transmitted force and an overestimation of 
+    rotational acceleration in the oblique impact phase.
+    \item \textbf{EPS liner simplification.} Modeling the EPS as linear 
+    elastic likely overestimates the transmitted force by 10--15\%, as the 
+    energy-dissipating cell crushing plateau is neglected; the 
+    EN 397 passes reported here likely represent a conservative safety 
+    margin.
+    \item \textbf{Rigid headform constraint.} The exclusion of assembly 
+    compliance marginally increases recorded force peaks. However, this 
+    ensures that the comparison is focused strictly on the shell material 
+    performance rather than assembly-specific dynamics.
+    \item \textbf{Numerical signal processing.} While the SAE J211 CFC 60 
+    filter is required to resolve meaningful force histories from explicit 
+    penalty contact, the 100 Hz cutoff may smooth transient peaks that occur 
+    at the millisecond scale. 
+\end{itemize}
+
+\section{Conclusions}
+Sustainable polymer alternatives, particularly Recycled PC and 
+Bamboo-HDPE 30\% wt, demonstrate structural compliance with the EN 397 
+force transmission standard. While Recycled PC offers superior 
+protection against rotational acceleration in oblique impacts, 
+Bamboo-HDPE composites may require surface coating or geometric 
+modifications to mitigate rotational injury risk. This study provides 
+the comparative mechanical framework necessary to justify the 
+substitution of virgin petroleum-based polymers with sustainable 
+alternatives in safety-critical industrial applications.
+
+\section{Future Work}
+Future research should focus on the following targeted, actionable gaps:
+\begin{enumerate}
+    \item Perform in-house physical EN 397 drop tests to provide direct 
+    validation of the FEA material models.
+    \item Extend simulation to optional EN 397 tests (e.g., 15$^\circ$ lateral 
+    impacts).
+    \item Model Bamboo-HDPE as an orthotropic material with 
+    direction-dependent properties to assess the error introduced by the 
+    isotropic assumption.
+    \item Conduct a parametric study of wall thickness (2.5--4.0 mm) for the 
+    sustainable materials to find the minimum compliant thickness.
+    \item Perform an indicative LCA using Ecoinvent data to quantify the 
+    CO$_2$e savings of sustainable material substitution.
+\end{enumerate}
+

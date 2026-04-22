@@ -1,0 +1,20 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces High-fidelity 3D CAD Model of the construction helmet shell, showing exterior ribbing and peak design.}}{7}{figure.caption.2}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Section view of the CAD assembly detailing the interface between the exterior polymer shell and the internal EPS energy-absorbing liner.}}{7}{figure.caption.3}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces FEA Assembly Setup Top View: Alignment of the helmet/headform assembly relative to the global coordinate system before the impact sequence.}}{8}{figure.caption.4}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Finite Element Mesh of the helmet shell highlighting the 2 mm element resolution at the crown impact zone.}}{9}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Mesh convergence study for Virgin HDPE shell showing peak equivalent stress stabilization.}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Mesh quality distribution for the 2 mm helmet model. The majority of elements maintain an orthogonal quality above 0.8 and a skewness below 0.3, ensuring high numerical accuracy.}}{10}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Transmitted Force vs.\ Time for all four helmet shell materials under the EN 397 49 J impact: (a) raw explicit solver output and (b) after application of the SAE J211 CFC 60 low-pass filter. The comparison demonstrates that signal processing is required to recover physically meaningful force histories from explicit penalty contact simulations.}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Relative kinematic displacement (crush depth) vs. time for Virgin HDPE and Recycled PC shells, illustrating the distinct stiffness responses.}}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Cross-sectional views of internal EPS liner strain at peak impact. The ductile HDPE exhibits severe localized yielding, whereas the rigid rPC distributes the load, resulting in significantly lower localized strain.}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Conceptual representation of load distribution due to increased flexural stiffness in high-modulus shells. The higher modulus promotes a broader distribution of the impact force, mitigating localized stress concentrations in the underlying liner.}}{16}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Velocity vector setup showing the 30-degree oblique impact methodology ($v = 4.43$ m/s) applied to the helmet-headform assembly.}}{17}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Asymmetric von Mises stress contours generated during the 30-degree oblique impact. High-modulus shells (ABS, rPC) show concentrated elastic responses compared to the yielding in HDPE.}}{17}{figure.caption.19}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Detailed Project Gantt Chart (Oct 2025 -- May 2026) demonstrating the engineering workflow, task dependencies, and the integrated Winter Break period.}}{22}{figure.caption.21}%

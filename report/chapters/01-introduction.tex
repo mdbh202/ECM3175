@@ -1,0 +1,60 @@
+\chapter{Introduction and Background}
+
+\section{Background and Motivation}
+Industrial safety helmets are critical personal protective equipment (PPE) 
+designed to shield workers from traumatic brain injury caused by falling 
+objects \cite{long2015, mishra2021}. Their protective function relies heavily on shell deformation, liner 
+compression, and energy distribution during an impact event. Traditionally, 
+these shells are injection-moulded from petroleum-derived engineering 
+thermoplastics such as Virgin High-Density Polyethylene (HDPE), Acrylonitrile 
+Butadiene Styrene (ABS), and Polycarbonate. These materials offer reliable 
+performance, high impact resistance, and cost-effectiveness. However, stricter 
+environmental regulations and the shift towards a circular economy now 
+necessitate sustainable material alternatives that remain compliant with strict 
+safety standards \cite{yadav2024}.
+
+\section{The EN 397 Standard}
+The European Standard EN 397 (DIN EN 397) represents the standardized safety 
+specification for industrial safety helmets \cite{en397}. This standard mandates specific 
+design requirements, performance specifications, and testing methodologies. 
+The primary shock absorption test requires a helmet to be mounted on a 
+standardized aluminium headform (per EN 960 specifications \cite{en960}). A hemispherical 
+striking mass of 5.0 kg is dropped from a 1-metre height onto the helmet 
+crown, imparting approximately 49 Joules of kinetic energy. To achieve 
+certification, the maximum transmitted force recorded at the neck of the 
+headform must not exceed 5.0 kN.
+
+\section{Project Aims and Objectives}
+The primary objective of this project is to evaluate the performance of 
+construction helmet shells under EN 397 impact conditions and establish 
+criteria that support the adoption of sustainable materials. The specific 
+objectives are:
+\begin{itemize}
+    \item To establish baseline impact performance metrics for conventional 
+    HDPE and ABS polymers using ANSYS LS-DYNA explicit finite element 
+    simulation \cite{lsdyna2021}.
+    \item To simulate and evaluate sustainable alternatives: a Bamboo-HDPE 
+    30\% wt composite and Recycled Polycarbonate (rPC).
+    \item To quantify macroscopic force transmission, energy absorption 
+    kinematics, and microscopic stress distribution across the different 
+    material properties.
+    \item To validate the explicit dynamics simulation thermodynamically and 
+    apply appropriate signal processing (SAE J211 \cite{sae1995}) to extract physical data.
+\end{itemize}
+
+The selected objectives establish a systematic performance evaluation of sustainable alternatives. Baseline HDPE and ABS models provide the validated reference against EN 397 experimental data required before introducing the previously unquantified response of Bamboo-HDPE and recycled Polycarbonate. Thermodynamic validation and SAE J211 signal processing address the numerical instability common in explicit FEA, ensuring that the final comparative metrics isolate structural behavior from computational noise.
+
+
+\section{Scope and Assumptions}
+
+This study is concerned with the macroscopic structural deceleration and 
+force transmission of construction helmet shells under normal crown 
+impact (4.43~m/s) and advanced 30$^\circ$ oblique impact conditions. To 
+maintain computational focus on shell material performance, several 
+simplifying assumptions were implemented:
+\begin{itemize}
+    \item \textbf{Geometry and Loading:} Impact includes a primary perpendicular (\texorpdfstring{0$^\circ$}{0 degrees}) drop onto the crown apex and a secondary \texorpdfstring{30$^\circ$}{30 degrees} oblique impact to assess rotational kinematics. To optimize the computational domain, these were modeled using a kinematic shift based on Galilean Invariance, where the helmet/headform assembly was assigned an initial upward velocity of 4.43 m/s against a stationary rigid ceiling. This approach isolates the impact event from unnecessary free-flight processing while maintaining standard mass parity.
+    \item \textbf{Material Modelling:} The polymer shells are treated as bilinear isotropic materials. The energy-absorbing liner is modelled as linear-elastic Expanded Polystyrene (EPS). The headform is modelled as a perfectly rigid 5.0 kg sphere to simplify contact definitions and ensure computational efficiency while maintaining standard mass parity.
+    \item \textbf{Environmental Factors:} All simulations are conducted at room temperature (\texorpdfstring{23~$^\circ$C}{23 degrees C}); temperature-dependent ductility and material aging are not considered.
+\end{itemize}
+The Bamboo-HDPE composite is approximated as an isotropic material, a simplification that is later addressed in the discussion of simulation limitations (see Section~\ref{sec:limitations}).

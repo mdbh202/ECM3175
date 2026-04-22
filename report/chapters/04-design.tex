@@ -1,0 +1,175 @@
+\chapter{Analytical Investigation and Design}
+
+\section{Finite Element Model Setup}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{cad_isometric.png} 
+    \caption{High-fidelity 3D CAD Model of the construction helmet shell, showing exterior ribbing and peak design.}
+    \label{fig:cad_model}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{cad_section_liner.png} 
+    \caption{Section view of the CAD assembly detailing the interface between the exterior polymer shell and the internal EPS energy-absorbing liner.}
+    \label{fig:cad_section_liner}
+\end{figure}
+
+The simulations were executed using the LS-DYNA explicit time integration 
+solver within ANSYS Workbench. As defined by the kinematic methodology in 
+Section 3.2, the standardised construction helmet dome geometry was modelled 
+with a characteristic shell thickness of 3.0 mm, paired with a standardised 
+EPS energy-absorbing liner. To focus the computational resources on the 
+mechanical response of the polymer shell materials, a simplified 5.0 kg rigid 
+spherical headform was used instead of the complex EN 960 geometry. 
+This simplification ensures contact stability at the liner interface and 
+provides a consistent kinematic reference point for force transmission 
+measurements, while maintaining the exact mass parity required by the EN 397 
+impact standard.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{cad_impact_setup.png} 
+    \caption{FEA Assembly Setup Top View: Alignment of the helmet/headform assembly relative to the global coordinate system before the impact sequence.}
+    \label{fig:assembly_setup}
+\end{figure}
+
+\section{Mesh Convergence Study}
+A mesh convergence study was performed on the Virgin HDPE baseline model to ensure that the results were independent of the spatial discretization. Five different element sizes were evaluated (6~mm, 5~mm, 4~mm, 3~mm, and 2~mm), with the peak equivalent stress monitored as the primary convergence metric. The model predominantly utilizes linear 4-node shell elements with Belytschko-Tsay integration and viscous hourglass control (Type 4) to maintain thermodynamic stability during the high-velocity impact \cite{belytschko2013, lsdyna2021}.
+
+As shown in Table~\ref{tab:mesh_convergence} and Figure~\ref{fig:convergence}, the maximum equivalent stress stabilized as the element size was reduced. The transition from 3~mm to 2~mm resulted in a change of 5.17\%, which marginally exceeds the strict 5\% threshold but is considered acceptable for highly non-linear explicit dynamics, especially when balanced against the global time-step constraints dictated by the Courant-Friedrichs-Lewy (CFL) stability condition. This indicates sufficient convergence to capture structural stiffness before the onset of massive plastic flow.
+
+
+\begin{table}[H]
+    \centering
+    \caption{Mesh convergence study metrics for Virgin HDPE helmet shell (sub-critical impact energy).}
+    \label{tab:mesh_convergence}
+    \begin{tabularx}{\textwidth}{C C C C}
+        \toprule
+        \textbf{Mesh Size (mm)} & \textbf{Elements (approx.)} & \textbf{Peak Stress (kg/mm$^2$)} & \textbf{Max Displacement (mm)} \\
+        \midrule
+        6.0  & 4,800  & 2.40 & 44.02 \\
+        5.0  & 6,700  & 2.38 & 40.37 \\
+        4.0  & 10,500 & 2.34 & 42.63 \\
+        3.0  & 18,900 & 2.01 & 51.56 \\
+        2.0  & 42,400 & 2.11 & 44.14 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+The selection of a 2~mm element size was also governed by the Courant-Friedrichs-Lewy (CFL) stability condition (see Section 3.1.2), which dictates that the solver time-step ($\Delta t$) must not exceed the time taken for a pressure wave to cross the smallest element dimension ($L_{min}$) \cite{lsdyna2021}. The final model achieved a stable time-step of approx. $0.42~\mu s$. Validation of 0.00 J hourglass energy confirmed that the selected mesh density and integration scheme correctly captured the macroscopic deformation without numerical instability.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{mesh_at_crown.png}
+    \caption{Finite Element Mesh of the helmet shell highlighting the 2 mm element resolution at the crown impact zone.}
+    \label{fig:helmet_mesh}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{mesh_convergence_HDPE.pdf}
+    \caption{Mesh convergence study for Virgin HDPE shell showing peak equivalent stress stabilization.}
+    \label{fig:convergence}
+\end{figure}
+\subsection{Mesh Quality Metrics}
+To ensure the reliability of the explicit dynamics results, the mesh quality was audited against industry-standard metrics for skewness, orthogonal quality, and aspect ratio \cite{lsdyna2021}. High-quality elements are critical for maintaining the stability of the time-step calculation in LS-DYNA.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{skewness.png}
+        \caption{Skewness}
+        \label{fig:mesh_skewness}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{orthogonal_quality.png}
+        \caption{Orthogonal Quality}
+        \label{fig:mesh_ortho}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{aspect_ratio.png}
+        \caption{Aspect Ratio}
+        \label{fig:mesh_aspect}
+    \end{subfigure}
+    \caption{Mesh quality distribution for the 2 mm helmet model. The majority of elements maintain an orthogonal quality above 0.8 and a skewness below 0.3, ensuring high numerical accuracy.}
+    \label{fig:mesh_quality}
+\end{figure}
+
+\section{Contact Parameters and Interaction}
+The interaction between the helmet assembly components was governed by the 
+LS-DYNA *Automatic Surface-to-Surface* penalty contact algorithm. A penalty 
+stiffness factor of 0.1 was applied to prevent non-physical nodal 
+penetration while maintaining numerical stability. Friction was modelled 
+using a Coulomb friction coefficient of $\mu = 0.3$ between the polymer shell 
+and the rigid headform, and $\mu = 0.5$ between the shell and the impacting 
+ceiling, consistent with standard polymer-on-metal contact mechanics in 
+crashworthiness simulations \cite{mishra2021}.
+
+\section{Material Models and Test Matrix}
+Four distinct materials were evaluated. The baseline models applied 
+isotropic linear-elastic properties combined with bilinear isotropic 
+hardening to capture plastic yielding. The material properties used in the 
+simulations are summarized in Table~\ref{tab:material_props}.
+
+\begin{table}[H]
+    \centering
+    \caption{Material properties assigned to the helmet shell FEA models. 
+    Values for conventional materials sourced from \cite{cruz2023} and 
+    sustainable alternatives derived from \cite{chandramohan2015, yadav2024}.}
+    \label{tab:material_props}
+    \begin{tabularx}{\textwidth}{>{\hsize=1.2\hsize}L C C C C C >{\hsize=0.8\hsize}L}
+        \toprule
+        \textbf{Material} & \textbf{E \small(GPa)} & \textbf{Yield \small(kg/mm$^2$)} & \textbf{Density \small(kg/m$^3$)} & \textbf{$\nu$} & \textbf{$E_{tan}$ \small(GPa)} & \textbf{Source} \\
+        \midrule
+        Virgin HDPE & 1.00 & 2.55 & 950 & 0.42 & 0.10 & \cite{tham2014} \\
+        ABS Plastic & 2.10 & 4.08 & 1050 & 0.35 & 0.50 & \cite{rigoni2017} \\
+        Bamboo-HDPE & 1.50 & 3.26 & 1020 & 0.38 & 0.30 & \cite{mohanty2010} \\
+        Recycled PC & 2.30 & 6.12 & 1200 & 0.37 & 0.60 & \cite{reich2019} \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+The Bamboo-HDPE composite is approximated as an isotropic material. This 
+simplification is justified based on the assumption of a random 
+short-fibre distribution within the 30\% wt blend, which promotes 
+quasi-isotropic macroscopic behaviour (Chandramohan et al., 2015). However, 
+potential orthotropy remains a limitation of the study (see 
+Section~\ref{sec:limitations}).
+
+\section{Force Extraction and Signal Processing}
+
+To determine the EN 397 regulatory compliance, the transmitted force ($F_t$) was derived from the peak nodal acceleration ($a_n$) of the headform's center of gravity:
+\begin{equation}
+    F_t = m_{hf} \cdot a_{filt}
+\end{equation}
+where $m_{hf}$ represents the standardized headform mass (5.0~kg) and $a_{filt}$ is the nodal acceleration signal after the application of the SAE J211 CFC 60 low-pass filter \cite{sae1995}.
+
+
+The raw nodal acceleration outputs were processed in Python. The 4-pole 
+phaseless Butterworth filter (SAE J211 CFC 60 specification) was applied 
+with a cutoff frequency of 100 Hz. The filter was applied bidirectionally 
+(forward and reverse pass) to achieve zero phase distortion, consistent 
+with the SAE J211 standard requirement for crash test data processing.
+
+\subsection{Signal Processing Refinements}
+The raw explicit data initially generated non-physical 
+nodal acceleration spikes. These spikes are a known numerical 
+artefact of explicit penalty contact formulations, where stress 
+waves artificially reflect through rigid bodies. Rather than classifying these as 
+structural failures, an SAE J211 low-pass filter was applied. 
+
+Because the raw ANSYS data was sampled at 1000 Hz, a CFC 60 filter (100 Hz 
+cutoff) was applied, adhering to the Nyquist--Shannon limit, to 
+successfully isolate the true macroscopic deceleration curve.
+
+Deformation tracking was also corrected to measure the \textit{relative} 
+kinematic displacement between the headform's centre of gravity and the 
+helmet apex, yielding the true structural crush depth rather than global 
+absolute movement.

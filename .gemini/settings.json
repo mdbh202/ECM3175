@@ -1,0 +1,10 @@
+{
+  "checkpointing": true,
+  "autoAccept": false,
+  "useWriteTodos": true,
+  "showStatusInTitle": true,
+  "enableToolOutputTruncation": true,
+  "experimental": {
+    "enableAgents": true
+  }
+}

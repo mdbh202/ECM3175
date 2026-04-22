@@ -1,0 +1,55 @@
+\chapter{Methodology and Theory}
+
+This chapter outlines the theoretical foundations of explicit dynamics and the specific mechanical principles governing the EN 397 drop test simulation.
+
+\section{Explicit Dynamics Theory}
+Explicit dynamics apply the central difference method to solve kinematic equations of motion directly without global stiffness matrix inversions. This is highly efficient for high-nonlinearity, millisecond-duration impact events.
+
+\subsection{Central Difference Integration}
+The semi-discrete equations of motion at time $t_n$ are expressed as:
+\begin{equation}
+    M \ddot{u}_n = F^{ext}_n - F^{int}_n
+\end{equation}
+where $M$ is the diagonal (lumped) mass matrix, $\ddot{u}_n$ is the nodal acceleration vector, $F^{ext}_n$ represents external applied loads (including contact forces), and $F^{int}_n$ represents internal nodal forces.
+
+LS-DYNA employs a modified central difference time integration scheme (Leapfrog method) to advance the solution \cite{lsdyna2021}. The nodal velocities and displacements are updated according to:
+\begin{equation}
+    \dot{u}_{n+1/2} = \dot{u}_{n-1/2} + \ddot{u}_n \Delta t_n
+\end{equation}
+\begin{equation}
+    u_{n+1} = u_n + \dot{u}_{n+1/2} \Delta t_{n+1/2}
+\end{equation}
+where $\Delta t_{n+1/2} = \frac{1}{2}(\Delta t_n + \Delta t_{n+1})$. This explicit approach allows for efficient processing of complex contact interactions between the rigid headform, the EPS liner, the polymer shell, and the rigid ceiling.
+
+\subsection{Stability and Time Step Control}
+The central difference method is conditionally stable. The time step $\Delta t$ is strictly limited by the Courant-Friedrichs-Lewy (CFL) condition \cite{belytschko2013}:
+\begin{equation}
+    \Delta t \leq \Delta t_{crit} = \frac{L_{min}}{c}
+\end{equation}
+where $L_{min}$ is the characteristic length of the smallest element in the mesh and $c$ is the local speed of sound in the material ($c = \sqrt{E/\rho}$). For this study, the 2 mm mesh resolution at the crown impact zone dictates the global time step, ensuring that the stress wave propagation is accurately captured during the 49 J impact.
+
+\section{Unit System and Numerical Consistency}
+A consistent [kg, mm, s] unit set was adopted for LS-DYNA stability. Strength and contact pressure are reported in kg/mm$^2$ ($1 \text{ kg/mm}^2 \approx 9.81 \text{ MPa}$), while Young’s ($E$) and Tangent ($E_{tan}$) Moduli are in GPa. Transmitted forces and impact energy use kN and J, respectively.
+To optimise the computational domain and stabilise the explicit penalty contact 
+algorithms, a kinematic shift was implemented based on the principle of 
+Galilean Invariance. Rather than a transient drop of a 5.0 kg mass onto a 
+stationary helmet, the rigid ``floor'' was modelled as a stationary ceiling. 
+The helmet and the 5.0 kg spherical headform assembly were grouped and 
+assigned a uniform upward initial velocity of 4.43 m/s. 
+
+According to classical mechanics, the laws of motion are invariant in all 
+inertial reference frames related by a constant velocity shift \cite{goldstein2002}. 
+In explicit finite element analysis, this transformation is a standard 
+technique to isolate the impact event from free-flight processing time, 
+provided that the element formulations are objectively invariant 
+\cite{lsdyna2021, belytschko2013}. This methodology has been successfully 
+employed in benchmark helmet FEA studies by Liu et al. \cite{liu2003} and 
+more recently in moving-load impact scenarios by Høgsberg and Pedersen 
+\cite{hogsberg2017}. 
+
+The physics of the 49 Joules impact ($E_k = \frac{1}{2}mv^2$) remains 
+mathematically identical at the moment of contact. Because the 
+impact duration in these simulations is extremely short ($\approx 8$--10 ms), 
+the additional acceleration due to gravity ($g = 9.81$ m/s$^2$) during the 
+contact phase contributes less than 0.2\% to the total impulse and can be 
+safely neglected in favor of contact stability and domain optimization.
