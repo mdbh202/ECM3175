@@ -11,10 +11,6 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Transmitted Force vs.\ Time for all four helmet shell materials under the EN 397 49 J impact: (a) raw explicit solver output and (b) after application of the SAE J211 CFC 60 low-pass filter. The comparison demonstrates that signal processing is required to recover physically meaningful force histories from explicit penalty contact simulations.}}{13}{figure.caption.11}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Relative kinematic displacement (crush depth) vs. time for Virgin HDPE and Recycled PC shells, illustrating the distinct stiffness responses.}}{15}{figure.caption.14}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Cross-sectional views of internal EPS liner strain at peak impact. The ductile HDPE exhibits severe localized yielding, whereas the rigid rPC distributes the load, resulting in significantly lower localized strain.}}{16}{figure.caption.16}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Conceptual representation of load distribution due to increased flexural stiffness in high-modulus shells. The higher modulus promotes a broader distribution of the impact force, mitigating localized stress concentrations in the underlying liner.}}{16}{figure.caption.17}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Velocity vector setup showing the 30-degree oblique impact methodology ($v = 4.43$ m/s) applied to the helmet-headform assembly.}}{17}{figure.caption.18}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Asymmetric von Mises stress contours generated during the 30-degree oblique impact. High-modulus shells (ABS, rPC) show concentrated elastic responses compared to the yielding in HDPE.}}{17}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Detailed Project Gantt Chart (Oct 2025 -- May 2026) demonstrating the engineering workflow, task dependencies, and the integrated Winter Break period.}}{22}{figure.caption.21}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Detailed Project Gantt Chart (Oct 2025 -- May 2026) demonstrating the engineering workflow, task dependencies, and the integrated Winter Break period.}}{20}{figure.caption.17}%

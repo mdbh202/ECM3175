@@ -38,21 +38,23 @@
 % Adjust chapter title formatting to Arial equivalent (Helvetica)
 % Using 'hang' to keep it on one line as per template requirements for Abstract/TOC
 \titleformat{\chapter}[hang]
-  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{\thechapter}{0.63cm}{}
+  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{\thechapter.}{0.63cm}{}
 \titleformat{name=\chapter,numberless}[hang]
   {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{}{0pt}{}
 \titlespacing*{\chapter}{0pt}{-20pt}{12pt}
 
 % Adjust Section/Subsection according to guidelines
-% Section: Arial Bold 16, 1.15 spacing, 12pt before/after, Indent 0 hanging 0.63cm
+% Section Heading (Level 1): Arial Bold 16
+\renewcommand{\thesection}{\thechapter.\arabic{section}.}
 \titleformat{\section}[hang]
-  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{\thesection}{0.63cm}{}
+  {\rmfamily\fontsize{14}{21}\bfseries\itshape\selectfont}{\thesection}{0.63cm}{}
 \titlespacing*{\section}{0pt}{12pt}{12pt}
 
-% Subsection: Cambria Bold Italic 14, 1.5 spacing, 6pt before/after, Indent 0.63cm left hanging 0.76cm
-% Using Times New Roman equivalent for Cambria to keep serif consistency in pdfLaTeX
+% Subheading (Level 2): Cambria Bold Italic 14
+% Since Section is already Level 1, we use Subsection for the Italicized Subheading
+\renewcommand{\thesubsection}{\thechapter.\arabic{section}.\arabic{subsection}.}
 \titleformat{\subsection}[hang]
-  {\rmfamily\fontsize{14}{21}\bfseries\itshape\selectfont}{\thesubsection}{0.76cm}{}
+  {\rmfamily\fontsize{12}{18}\bfseries\itshape\selectfont}{\thesubsection}{0.76cm}{}
 \titlespacing*{\subsection}{0.63cm}{6pt}{6pt}
 
 % TOC Formatting
@@ -62,10 +64,13 @@
 \setlength{\cftparskip}{10pt} % Paragraph spacing 10pt after for TOC entries
 \renewcommand{\cftchapfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
 \renewcommand{\cftchappagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftchapaftersnumb}{.} % Add dot after chapter number in TOC
 \renewcommand{\cftsecfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
 \renewcommand{\cftsecpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftsecaftersnumb}{.} % Add dot after section number in TOC
 \renewcommand{\cftsubsecfont}{\rmfamily\fontsize{11}{13.2}\selectfont}
 \renewcommand{\cftsubsecpagefont}{\rmfamily\fontsize{11}{13.2}\selectfont}
+\renewcommand{\cftsubsecaftersnumb}{.} % Add dot after subsection number in TOC
 \cftsetindents{chapter}{0cm}{1.5em}
 \cftsetindents{section}{0cm}{2.3em}
 \cftsetindents{subsection}{0.39cm}{3.2em}
