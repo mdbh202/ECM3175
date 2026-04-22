@@ -1,8 +1,8 @@
 \begingroup
-% Redefine chapter format specifically for References to be Arial Bold 18pt
-\titleformat{\chapter}[display]
-  {\fontfamily{phv}\fontsize{18}{20.7}\bfseries\selectfont}{}{0pt}{\fontsize{18}{20.7}\selectfont}
-\titlespacing*{\chapter}{0pt}{12pt}{12pt}
+% Redefine chapter format to match the rest of the document (16pt Arial Bold)
+\titleformat{\chapter}[hang]
+  {\fontfamily{phv}\fontsize{16}{18.4}\bfseries\selectfont}{}{0pt}{}
+\titlespacing*{\chapter}{0pt}{-20pt}{12pt}
 
 \renewcommand{\bibname}{References}
 
@@ -10,14 +10,15 @@
 \setstretch{1.0}
 \rmfamily\fontsize{10}{12}\selectfont
 
-% Adjust the bibliography list parameters for hanging indent 0.76cm and 0 spacing
+% Adjust the bibliography list parameters to align with the heading
+% Hanging indent where the number [1] starts at 0pt
 \let\oldthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
   \oldthebibliography{#1}
   \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt}
-  \setlength{\leftmargin}{0.76cm}
-  \setlength{\itemindent}{-0.76cm}
+  \setlength{\itemsep}{6pt}
+  \setlength{\leftmargin}{0.63cm}
+  \setlength{\itemindent}{-0.63cm}
 }
 
 \bibliographystyle{unsrt}
