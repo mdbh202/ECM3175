@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.16)  22 APR 2026 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.16)  26 APR 2026 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,6 +319,10 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
@@ -373,11 +377,6 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count329
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip18
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen264
 
@@ -1157,63 +1156,63 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 112.
+h' as default language. on input line 113.
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 112.
+e 113.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 112.
+(Font)              scaled to size 10.95pt on input line 113.
  (out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 112.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 113.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 112.
+ 113.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 113.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-112.
+113.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 113.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 112.
+ 113.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 113.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 112.
+e 113.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    ... okay on input line 113.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1277,13 +1276,13 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 112.
-LaTeX Info: Command `\dddot' is already robust on input line 112.
-LaTeX Info: Command `\ddddot' is already robust on input line 112.
+or `english'. on input line 113.
+LaTeX Info: Command `\dddot' is already robust on input line 113.
+LaTeX Info: Command `\ddddot' is already robust on input line 113.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 112.
+Package hyperref Info: Link coloring OFF on input line 113.
  (out/main.out) (out/main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1292,7 +1291,7 @@ Package hyperref Info: Link coloring OFF on input line 112.
 \c@mv@boldtabular=\count409
 
 (./chapters/front-matter.tex
-<figures/exeter_logo.png, id=167, 2890.8pt x 1806.75pt>
+<figures/exeter_logo.png, id=171, 2890.8pt x 1806.75pt>
 File: figures/exeter_logo.png Graphic file (type png)
 <use figures/exeter_logo.png>
 Package pdftex.def Info: figures/exeter_logo.png  used on input line 8.
@@ -1409,7 +1408,12 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [4] (./chapters/01-introduction.tex
+ [4] (out/main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+ [5]
+(./chapters/01-introduction.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.0pt on input line 3.
@@ -1445,14 +1449,77 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.1pt on input line 32.
 [5
 
-]) (./chapters/04-design.tex [6]
+]
+<figures/cad_impact_setup.png, id=392, 1478.52374pt x 743.77875pt>
+File: figures/cad_impact_setup.png Graphic file (type png)
+<use figures/cad_impact_setup.png>
+Package pdftex.def Info: figures/cad_impact_setup.png  used on input line 44.
+(pdftex.def)             Requested size: 203.83434pt x 102.53943pt.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 45.
+<figures/model_30_oblique_setup.png, id=394, 971.12813pt x 900.36375pt>
+File: figures/model_30_oblique_setup.png Graphic file (type png)
+<use figures/model_30_oblique_setup.png>
+Package pdftex.def Info: figures/model_30_oblique_setup.png  used on input line
+ 50.
+(pdftex.def)             Requested size: 203.83434pt x 188.97206pt.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 5.5pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.0pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 7.3pt on input line 51.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 5.5pt on input line 51.
+) (./chapters/04-design.tex [6 <./figures/cad_impact_setup.png> <./figures/mode
+l_30_oblique_setup.png>]
 Chapter 4.
-<figures/cad_isometric.png, id=347, 1199.98312pt x 877.02657pt>
+<figures/cad_isometric.png, id=410, 1199.98312pt x 877.02657pt>
 File: figures/cad_isometric.png Graphic file (type png)
 <use figures/cad_isometric.png>
 Package pdftex.def Info: figures/cad_isometric.png  used on input line 7.
 (pdftex.def)             Requested size: 317.0764pt x 231.74182pt.
-<figures/cad_section_liner.png, id=349, 1273.00594pt x 991.45406pt>
+<figures/cad_section_liner.png, id=411, 1273.00594pt x 991.45406pt>
 File: figures/cad_section_liner.png Graphic file (type png)
 <use figures/cad_section_liner.png>
 Package pdftex.def Info: figures/cad_section_liner.png  used on input line 14.
@@ -1460,103 +1527,56 @@ Package pdftex.def Info: figures/cad_section_liner.png  used on input line 14.
 [7
 
  <./figures/cad_isometric.png> <./figures/cad_section_liner.png>]
-<figures/cad_impact_setup.png, id=357, 1478.52374pt x 743.77875pt>
-File: figures/cad_impact_setup.png Graphic file (type png)
-<use figures/cad_impact_setup.png>
-Package pdftex.def Info: figures/cad_impact_setup.png  used on input line 33.
-(pdftex.def)             Requested size: 271.7837pt x 136.72302pt.
- [8 <./figures/cad_impact_setup.png>]
-<figures/mesh_at_crown.png, id=369, 1600.47937pt x 813.0375pt>
+<figures/mesh_at_crown.png, id=423, 1600.47937pt x 813.0375pt>
 File: figures/mesh_at_crown.png Graphic file (type png)
 <use figures/mesh_at_crown.png>
-Package pdftex.def Info: figures/mesh_at_crown.png  used on input line 65.
+Package pdftex.def Info: figures/mesh_at_crown.png  used on input line 59.
 (pdftex.def)             Requested size: 317.0764pt x 161.06628pt.
-<figures/mesh_convergence_HDPE.pdf, id=370, 507.58696pt x 341.81451pt>
+ [8]
+<figures/mesh_convergence_HDPE.pdf, id=428, 507.58696pt x 341.81451pt>
 File: figures/mesh_convergence_HDPE.pdf Graphic file (type pdf)
 <use figures/mesh_convergence_HDPE.pdf>
 Package pdftex.def Info: figures/mesh_convergence_HDPE.pdf  used on input line 
-72.
+66.
 (pdftex.def)             Requested size: 317.0764pt x 213.52922pt.
-<figures/skewness.png, id=372, 712.91344pt x 545.78906pt>
+<figures/skewness.png, id=430, 712.91344pt x 545.78906pt>
 File: figures/skewness.png Graphic file (type png)
 <use figures/skewness.png>
-Package pdftex.def Info: figures/skewness.png  used on input line 83.
+Package pdftex.def Info: figures/skewness.png  used on input line 77.
 (pdftex.def)             Requested size: 144.95316pt x 110.97139pt.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 84.
-<figures/orthogonal_quality.png, id=373, 698.61pt x 538.26094pt>
+<figures/orthogonal_quality.png, id=431, 698.61pt x 538.26094pt>
 File: figures/orthogonal_quality.png Graphic file (type png)
 <use figures/orthogonal_quality.png>
-Package pdftex.def Info: figures/orthogonal_quality.png  used on input line 90.
+Package pdftex.def Info: figures/orthogonal_quality.png  used on input line 84.
 
 (pdftex.def)             Requested size: 144.95316pt x 111.68295pt.
-<figures/aspect_ratio.png, id=374, 696.35156pt x 543.53062pt>
+<figures/aspect_ratio.png, id=432, 696.35156pt x 543.53062pt>
 File: figures/aspect_ratio.png Graphic file (type png)
 <use figures/aspect_ratio.png>
-Package pdftex.def Info: figures/aspect_ratio.png  used on input line 97.
+Package pdftex.def Info: figures/aspect_ratio.png  used on input line 91.
 (pdftex.def)             Requested size: 144.95316pt x 113.14127pt.
- [9 <./figures/mesh_at_crown.png> <./figures/mesh_convergence_HDPE.pdf>] [10 <.
-/figures/skewness.png> <./figures/orthogonal_quality.png> <./figures/aspect_rat
-io.png>]
+
+[9 <./figures/mesh_at_crown.png> <./figures/mesh_convergence_HDPE.pdf>]
+<figures/element_ratio.png, id=484, 700.11563pt x 544.28343pt>
+File: figures/element_ratio.png Graphic file (type png)
+<use figures/element_ratio.png>
+Package pdftex.def Info: figures/element_ratio.png  used on input line 101.
+(pdftex.def)             Requested size: 317.0764pt x 246.50325pt.
+
+[10 <./figures/skewness.png> <./figures/orthogonal_quality.png> <./figures/aspe
+ct_ratio.png> <./figures/element_ratio.png>]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 172.
-) (./chapters/05-results.tex [11]
+(Font)              scaled to size 10.95pt on input line 173.
+) (./chapters/05-results.tex
+[11]
 Chapter 5.
-<figures/Phase2_ForceTransmission.pdf, id=470, 578.16pt x 361.35pt>
+<figures/Phase2_ForceTransmission.pdf, id=530, 578.16pt x 361.35pt>
 File: figures/Phase2_ForceTransmission.pdf Graphic file (type pdf)
 <use figures/Phase2_ForceTransmission.pdf>
 Package pdftex.def Info: figures/Phase2_ForceTransmission.pdf  used on input li
 ne 54.
 (pdftex.def)             Requested size: 385.02577pt x 240.63658pt.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 57.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 57.
-<figures/Phase2_ForceTransmission_Filtered.pdf, id=471, 578.16pt x 361.35pt>
+<figures/Phase2_ForceTransmission_Filtered.pdf, id=531, 578.16pt x 361.35pt>
 File: figures/Phase2_ForceTransmission_Filtered.pdf Graphic file (type pdf)
 <use figures/Phase2_ForceTransmission_Filtered.pdf>
 Package pdftex.def Info: figures/Phase2_ForceTransmission_Filtered.pdf  used on
@@ -1565,63 +1585,78 @@ Package pdftex.def Info: figures/Phase2_ForceTransmission_Filtered.pdf  used on
 [12
 
 ] [13 <./figures/Phase2_ForceTransmission.pdf> <./figures/Phase2_ForceTransmiss
-ion_Filtered.pdf>] [14]
-<figures/Phase5_CrushDepth.pdf, id=641, 507.58696pt x 341.81451pt>
+ion_Filtered.pdf>]
+<figures/stress_top_hdpe.png, id=692, 1390.44469pt x 965.85844pt>
+File: figures/stress_top_hdpe.png Graphic file (type png)
+<use figures/stress_top_hdpe.png>
+Package pdftex.def Info: figures/stress_top_hdpe.png  used on input line 148.
+(pdftex.def)             Requested size: 217.42282pt x 151.01817pt.
+<figures/stress_top_rpc.png, id=693, 1405.50093pt x 965.85844pt>
+File: figures/stress_top_rpc.png Graphic file (type png)
+<use figures/stress_top_rpc.png>
+Package pdftex.def Info: figures/stress_top_rpc.png  used on input line 154.
+(pdftex.def)             Requested size: 217.42282pt x 149.41174pt.
+<figures/stress_top_abs.png, id=694, 1321.18594pt x 962.84718pt>
+File: figures/stress_top_abs.png Graphic file (type png)
+<use figures/stress_top_abs.png>
+Package pdftex.def Info: figures/stress_top_abs.png  used on input line 160.
+(pdftex.def)             Requested size: 217.42282pt x 158.45155pt.
+<figures/stress_top_bamboo.png, id=695, 1237.62375pt x 816.04875pt>
+File: figures/stress_top_bamboo.png Graphic file (type png)
+<use figures/stress_top_bamboo.png>
+Package pdftex.def Info: figures/stress_top_bamboo.png  used on input line 166.
+
+(pdftex.def)             Requested size: 217.42282pt x 143.35855pt.
+ [14]
+<figures/strain_section_hdpe.png, id=701, 1410.77063pt x 773.13844pt>
+File: figures/strain_section_hdpe.png Graphic file (type png)
+<use figures/strain_section_hdpe.png>
+Package pdftex.def Info: figures/strain_section_hdpe.png  used on input line 18
+2.
+(pdftex.def)             Requested size: 217.42282pt x 119.15099pt.
+<figures/strain_section_rpc.png, id=702, 1378.39969pt x 813.79031pt>
+File: figures/strain_section_rpc.png Graphic file (type png)
+<use figures/strain_section_rpc.png>
+Package pdftex.def Info: figures/strain_section_rpc.png  used on input line 188
+.
+(pdftex.def)             Requested size: 217.42282pt x 128.3589pt.
+ [15 <./figures/stress_top_hdpe.png> <./figures/stress_top_rpc.png> <./figures/
+stress_top_abs.png> <./figures/stress_top_bamboo.png> <./figures/strain_section
+_hdpe.png> <./figures/strain_section_rpc.png>]
+<figures/Phase5_CrushDepth.pdf, id=715, 507.58696pt x 341.81451pt>
 File: figures/Phase5_CrushDepth.pdf Graphic file (type pdf)
 <use figures/Phase5_CrushDepth.pdf>
-Package pdftex.def Info: figures/Phase5_CrushDepth.pdf  used on input line 148.
+Package pdftex.def Info: figures/Phase5_CrushDepth.pdf  used on input line 206.
 
-(pdftex.def)             Requested size: 317.0764pt x 213.52922pt.
-) (./chapters/06-discussion.tex [15 <./figures/Phase5_CrushDepth.pdf>]
+(pdftex.def)             Requested size: 217.42282pt x 146.41408pt.
+<figures/Phase4_NormalStress.pdf, id=716, 568.05664pt x 424.43756pt>
+File: figures/Phase4_NormalStress.pdf Graphic file (type pdf)
+<use figures/Phase4_NormalStress.pdf>
+Package pdftex.def Info: figures/Phase4_NormalStress.pdf  used on input line 21
+2.
+(pdftex.def)             Requested size: 217.42282pt x 162.45369pt.
+<figures/abs_oblique_stress_final.png, id=718, 869.49844pt x 940.26282pt>
+File: figures/abs_oblique_stress_final.png Graphic file (type png)
+<use figures/abs_oblique_stress_final.png>
+Package pdftex.def Info: figures/abs_oblique_stress_final.png  used on input li
+ne 260.
+(pdftex.def)             Requested size: 385.02577pt x 416.37115pt.
+)
+(./chapters/06-discussion.tex [16 <./figures/Phase5_CrushDepth.pdf> <./figures/
+Phase4_NormalStress.pdf>] [17 <./figures/abs_oblique_stress_final.png>]
 Chapter 6.
-[16
+<figures/Snowshoe_Effect_Conceptual.png, id=835, 686.0832pt x 320.8788pt>
+File: figures/Snowshoe_Effect_Conceptual.png Graphic file (type png)
+<use figures/Snowshoe_Effect_Conceptual.png>
+Package pdftex.def Info: figures/Snowshoe_Effect_Conceptual.png  used on input 
+line 37.
+(pdftex.def)             Requested size: 317.0764pt x 148.2964pt.
+[18
 
-] [17]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.104 ...rection-dependent properties (using *MAT_
-                                                  002* in LS-DYNA) to assess...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105     \item
-                \textbf{Lifecycle Aging:} Conduct a parametric study on the ...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.105     \item \textbf
-                       {Lifecycle Aging:} Conduct a parametric study on the ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (201.08957pt too wide) in paragraph at lines 104--105
-\OT1/minntx/m/n/10.95 direction-dependent prop-er-ties (us-ing *MAT$[]02 \LMS/n
-txsy/m/n/10.95 ^^C \OML/ntxmi/m/it/10.95 inLS \LMS/ntxsy/m/n/10.95 ^^@ \OML/ntx
-mi/m/it/10.95 DYNA\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 toassesstheerrori
-ntroducedbytheisotropicassumptioninthecurrentstudy:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-) (./chapters/07-project-management.tex [18]
+ <./figures/Snowshoe_Effect_Conceptual.png>] [19])
+(./chapters/07-project-management.tex [20]
 Chapter 7.
-[19
+[21
 
 ]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
@@ -1634,46 +1669,56 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 41.
 
 Missing character: There is no , in font nullfont!
-[20
+[22
 
-]) (./chapters/99-references.tex (out/main.bbl [21
+]) (./chapters/99-references.tex (out/main.bbl [23
 
 ]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 6.
-)) [22
+LaTeX Font Info:    Trying to load font information for OT1+ntxtt on input line
+ 9.
 
-] (out/main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/ot1ntxtt.fd
+File: ot1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `OT1/ntxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 9.
+ [24
+
+]))
+[25] (out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A6EFBB8F70C171F6DBEDDD67F100C793;8659.
+(rerunfilecheck)             Checksum: 2F21AB4500125E6C6815B5C499A97CA5;8914.
  ) 
 Here is how much of TeX's memory you used:
- 34730 strings out of 467525
- 695015 string characters out of 5418982
- 1073716 words of memory out of 5000000
- 62896 multiletter control sequences out of 15000+600000
- 698112 words of font info for 163 fonts, out of 8000000 for 9000
+ 34909 strings out of 467525
+ 699851 string characters out of 5418982
+ 1081907 words of memory out of 5000000
+ 63055 multiletter control sequences out of 15000+600000
+ 698983 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,108p,1193b,1170s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,108p,1193b,1270s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></us
 r/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/loc
 al/texlive/2026/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/tex
 live/2026/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/202
 6/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2026/texmf
 -dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2026/texmf-dist/fo
-nts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
-ic/newtx/ztmb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/
-ztmbi.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on out/main.pdf (28 pages, 2591731 bytes).
+nts/type1/public/txfonts/txtt.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newt
+x/ztmb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmbi.p
+fb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on out/main.pdf (32 pages, 10352069 bytes).
 PDF statistics:
- 817 PDF objects out of 1000 (max. 8388607)
- 518 compressed objects within 6 object streams
- 117 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1010 PDF objects out of 1200 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 128 named destinations out of 1000 (max. 500000)
+ 456 words of extra memory for PDF output out of 10000 (max. 10000000)
 

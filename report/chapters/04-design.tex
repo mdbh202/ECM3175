@@ -25,17 +25,11 @@ mechanical response of the polymer shell materials, a simplified 5.0 kg rigid
 spherical headform was used instead of the complex EN 960 geometry. 
 This simplification ensures contact stability at the liner interface and 
 provides a consistent kinematic reference point for force transmission 
-measurements, while maintaining the exact mass parity required by the EN 397 
+maintain the exact mass parity required by the EN 397 
 impact standard.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{cad_impact_setup.png} 
-    \caption{FEA Assembly Setup Top View: Alignment of the helmet/headform assembly relative to the global coordinate system before the impact sequence.}
-    \label{fig:assembly_setup}
-\end{figure}
-
 \section{Mesh Convergence Study}
+
 A mesh convergence study was performed on the Virgin HDPE baseline model to ensure that the results were independent of the spatial discretization. Five different element sizes were evaluated (6~mm, 5~mm, 4~mm, 3~mm, and 2~mm), with the peak equivalent stress monitored as the primary convergence metric. The model predominantly utilizes linear 4-node shell elements with Belytschko-Tsay integration and viscous hourglass control (Type 4) to maintain thermodynamic stability during the high-velocity impact~\cite{belytschko2013, lsdyna2021}.
 
 As shown in Table~\ref{tab:mesh_convergence} and Figure~\ref{fig:convergence}, the maximum equivalent stress stabilized as the element size was reduced. The transition from 3~mm to 2~mm resulted in a change of 5.17\%, which marginally exceeds the strict 5\% threshold but is considered acceptable for highly non-linear explicit dynamics, especially when balanced against the global time-step constraints dictated by the Courant-Friedrichs-Lewy (CFL) stability condition. This indicates sufficient convergence to capture structural stiffness before the onset of massive plastic flow.
@@ -100,6 +94,13 @@ To ensure the reliability of the explicit dynamics results, the mesh quality was
     \end{subfigure}
     \caption{Mesh quality distribution for the 2 mm helmet model. The majority of elements maintain an orthogonal quality above 0.8 and a skewness below 0.3, ensuring high numerical accuracy.}
     \label{fig:mesh_quality}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{element_ratio.png}
+    \caption{Mesh element ratio distribution, confirming the dominance of high-quality quadrilaterals in the impact zone.}
+    \label{fig:element_ratio}
 \end{figure}
 
 \section{Contact Parameters and Interaction}

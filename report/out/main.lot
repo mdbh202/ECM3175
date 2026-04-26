@@ -1,0 +1,16 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Mesh convergence study metrics for Virgin HDPE helmet shell (sub-critical impact energy).}}{8}{table.caption.5}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Material properties assigned to the helmet shell FEA models. Values for conventional materials sourced from~\cite {cruz2023} and sustainable alternatives derived from~\cite {chandramohan2015, yadav2024}.}}{11}{table.caption.10}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Thermodynamic validation summary from LS-DYNA global statistics (\textit {glstat}) for all four helmet shell materials.}}{12}{table.caption.11}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Summary of EN 397 force transmission results for all four helmet shell materials.}}{14}{table.caption.13}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Energy partition at end of simulation ($t = 0.02$ s) for all four helmet shell materials. Initial impact energy $\approx $ 49.5 J across all models.}}{14}{table.caption.14}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Maximum structural crush depth (relative displacement) for all four helmet shell materials under 49 J impact.}}{16}{table.caption.18}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Peak kinematic metrics recorded at the headform center of gravity during the 30-degree oblique impact simulations.}}{16}{table.caption.19}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Indicative Lifecycle Assessment (LCA) comparison of helmet shell materials. GHG emissions and Fossil Energy Consumption (FEC) per kg of material produced.}}{23}{table.caption.23}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Project Risk Register detailing technical and operational risks associated with the FEA dissertation lifecycle.}}{23}{table.caption.24}%

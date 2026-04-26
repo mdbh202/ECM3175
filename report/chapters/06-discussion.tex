@@ -30,7 +30,16 @@ Conversely, the high-modulus materials (ABS, rPC) protect the wearer
 via load distribution due to increased flexural stiffness. By 
 distributing the impact force across a broader surface area of the 
 EPS liner, these materials transmit lower localised stress to the 
-shell structure. The superior performance of the ABS shell (2.25 kN) 
+shell structure. The mechanical advantage of high-modulus shells is conceptualised as a ``snowshoe effect'', where the stiff shell prevents localized indentation, as shown in Figure~\ref{fig:snowshoe_effect}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Snowshoe_Effect_Conceptual.png}
+    \caption{Conceptual diagram of the ``Snowshoe Effect'': High-modulus shells distribute impact pressure across a larger area of the energy-absorbing liner, reducing peak transmitted stress.}
+    \label{fig:snowshoe_effect}
+\end{figure}
+
+The superior performance of the ABS shell (2.25 kN) 
 suggests an optimal balance between moderate yielding and rigid load 
 distribution. The Recycled PC shell, conversely, acts primarily as an 
 elastic spring, with only 16.67 J absorbed as internal strain energy. 
@@ -101,7 +110,7 @@ Future research should focus on the following targeted, actionable gaps:
 \begin{enumerate}
     \item \textbf{Environmental Conditioning (Thermal Sensitivity):} This investigation was restricted to ambient laboratory conditions ($23~^\circ$C). However, industrial safety helmets are operational in extremes ranging from $-10~^\circ$C (winter construction) to $+50~^\circ$C (direct solar radiation). Future FEA should incorporate temperature-dependent material models to evaluate the proximity of the operating temperature to the Glass Transition Temperature ($T_g$), particularly for Recycled PC, to ensure against ductile-to-brittle transitions in cold climates.
     \item \textbf{Bio-Mechanical Validation:} Move from a rigid spherical headform to a Hybrid III bio-fidelic headform with a flexible cervical spine. This would provide a more accurate representation of how the neck reacts to the high rotational torque recorded in the Bamboo-Composite models and allow for the calculation of the Brain Injury Criterion (BrIC).
-    \item \textbf{Anisotropic Composite Modelling:} Model Bamboo-HDPE as an orthotropic material with direction-dependent properties (using *MAT_002* in LS-DYNA) to assess the error introduced by the isotropic assumption in the current study.
+    \item \textbf{Anisotropic Composite Modelling:} Model Bamboo-HDPE as an orthotropic material with direction-dependent properties (using *MAT\_002* in LS-DYNA) to assess the error introduced by the isotropic assumption in the current study.
     \item \textbf{Lifecycle Aging:} Conduct a parametric study on the UV degradation of bio-composites. Natural fibres are susceptible to moisture absorption and UV-induced embrittlement, which may compromise long-term impact integrity over a 5-year service life.
     \item \textbf{Parametric Wall Thickness Optimization:} Perform a thickness-sweep (2.0--4.0~mm) to identify the minimum material mass required to maintain EN 397 compliance, further reducing the carbon footprint per unit.
 \end{enumerate}

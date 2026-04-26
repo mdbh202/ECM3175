@@ -18,6 +18,7 @@
 \let\oldthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
   \oldthebibliography{#1}
+  \sloppy
   \setlength{\parskip}{0pt}
   \setlength{\itemsep}{6pt}
   \setlength{\leftmargin}{0.63cm} 
@@ -26,7 +27,7 @@
   \setlength{\itemindent}{0pt}   % Ensure no negative pulling into the margin
 }
 
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrturl}
 \bibliography{references}
 \addcontentsline{toc}{chapter}{References}
 \endgroup

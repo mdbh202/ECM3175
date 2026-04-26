@@ -1,0 +1,108 @@
+--- Key: long2015 | DOI: 10.1080/10255842.2013.774382 ---
+Title: Simulation-based assessment for construction helmets
+Abstract: Abstract not provided in metadata.
+
+--- Key: mishra2021 | DOI: 10.3126/kuset.v15i2.63368 ---
+Title: Design and analysis of industrial safety helmet
+Abstract: The safety of the workers is a valuable asset in every organization. A safety helmet is one of the personal protective equipment to ensure the user’s head against the impact of heavy loads in work sites. This study presents the optimized design of the shell of locally used safety helmets in Nepal’s industries and works sites. The study is based on the cohesive findings from qualitative and quantitative research. The interviews were carried out in Mahindra Auto Works Pvt. Ltd. and Dhulikhel Hospital. Questionnaire data were collected from Udayapur Cement Industries Ltd., Balaju Industrial Area and Patan Industrial Area, which helped identify the problems in Nepal’s existing safety helmets. The issues identified were headache due to extra weight, insufficient ventilation, adjustment and fitting problem, insufficient peak, inadequate aesthetic look, tight chin strap. The data from Dhulikhel Hospital interpreted anatomy of head and was considered to proceed with the new design of helmet shell. The 3D design of the shell of the newly designed helmet and the existing helmet was done in SolidWorks, and their simulation was carried out in ANSYS Workbench 15. The comparison of old and new models was done for static, dynamic and compression test considering the varying cases and force magnitudes. This study concludes that the total deformation and equivalent stress of the new model were less than that of the old model. 
+
+--- Key: rigoni2017 | DOI: 10.1249/00005768-197721000-00027 ---
+Title: Material Characterization and Finite Element simulation of Ice Hockey Helmets under rotational impact conditions
+Abstract: Abstract not provided in metadata.
+
+--- Key: mohanty2010 | DOI: 10.3390/polym12040929 ---
+Title: Influence of bamboo fiber content and coupling agent on mechanical, thermal, and rheological properties of HDPE/bamboo composites
+Abstract: Researches on thermoplastic composites using natural fiber as reinforcement are increasing, but studies of durability over time are scarce. In this sense the objective of this study is to evaluate changes in the properties of polypropylene/bamboo fiber (PP/BF) composite and the influence of the use of coupling agent (CA) in these composites after natural ageing. The PP/BF (70/30 wt) composites and 3% wt CA (citric acid from natural origin and maleic anhydride grafted polypropylene from petrochemical origin) were prepared by using an internal mixer chamber and then injection-molded. The samples were exposed to natural weathering for a total period of 12 months and characterized before and after exposure. All exposed composites experienced a decrease in their properties, however, the use of CA promoted more stability; in mechanical properties, the composites with CA showed lower loss about 23% in Young′s modulus, 18% in tensile stress at break, and 6% in impact strength. This behavior was similar in thermal and physical properties, the result for the CA of natural origin being similar to that of synthetic origin. These results indicate that the use of a CA may promote higher interaction between the fiber and the polymer. In addition, the CAs of organic origin and synthetic origin exhibited similar responses to natural ageing.
+
+--- Key: reich2019 | DOI: 10.3390/ma12101642 ---
+Title: Mechanical Properties and Applications of Recycled Polycarbonate Particle Material Extrusion-Based Additive Manufacturing
+Abstract: Past work has shown that particle material extrusion (fused particle fabrication (FPF)/fused granular fabrication (FGF)) has the potential for increasing the use of recycled polymers in 3D printing. This study extends this potential to high-performance (high-mechanical-strength and heat-resistant) polymers using polycarbonate (PC). Recycled PC regrind of approximately 25 mm2 was 3D printed with an open-source Gigabot X and analyzed. A temperature and nozzle velocity matrix was used to find useful printing parameters, and a print test was used to maximize the output for a two-temperature stage extruder for PC. ASTM type 4 tensile test geometries as well as ASTM-approved compression tests were used to determine the mechanical properties of PC and were compared with filament printing and the bulk virgin material. The results showed the tensile strength of parts manufactured from the recycled PC particles (64.9 MPa) were comparable to that of the commercial filament printed on desktop (62.2 MPa) and large-format (66.3 MPa) 3D printers. Three case study applications were investigated: (i) using PC as a rapid molding technology for lower melting point thermoplastics, (ii) printed parts for high temperature applications, and (iii) printed parts for high-strength applications. The results show that recycled PC particle-based 3D printing can produce high-strength and heat-resistant products at low costs.
+
+--- Key: wu2022 | DOI: 10.1007/s10439-022-02922-3 ---
+Title: Evaluation of the Fall Protection of Type I Industrial Helmets
+Abstract: Abstract not provided in metadata.
+
+--- Key: obele2015 | DOI: 10.4028/www.scientific.net/kem.889.3 ---
+Title: Mechanical Properties of Coir Fiber Reinforced Epoxy Resin Composites for Helmet Shell
+Abstract: The utilization of natural fibers in composites continues to increase due to their advantages over the synthetic fiber materials especially in terms of environmental impact and costs. One of the techniques that can be used to further enhance the properties of these natural fiber reinforced composites is through fiber hybridization. In this study, salago and coir fibers were reinforced in the epoxy resin to form a new hybrid composite. The salago to coir fiber weight ratios considered in the fiber hybridization were 3:1, 1:1 and 1:3. The performance of these hybrid fiber composites were compared to pure coir fiber composite and salago fiber composite in terms of impact strength, tensile properties and flexural properties. Among the hybrid fiber composites, the fiber weight ratio of 3:1 has the highest tensile strength (33.8 MPa), tensile modulus (3.57 GPa), flexural strength (44.2 MPa) and impact strength (42.3 J/m). It was found out that the addition of coir to this hybrid fiber composite improves the tensile strength by about 21.1 % as compared to the salago fiber composite. On the other hand, the addition of salago fiber to this hybrid fiber composite resulted to a higher tensile modulus (43.4 %) and impact strength (25.5 %) than the coir fiber composite. Moreover, the thermal analysis of the composites revealed a peak degradation temperature at around 370 °C which is associated to the decomposition of cellulose, hemicellulose and epoxy resin.
+
+--- Key: yadav2024 | DOI: 10.1061/9780784412787.149 ---
+Title: Life Cycle Environmental Impact and Mechanical Performance of Recycled Engineering Thermoplastics
+Abstract: Abstract not provided in metadata.
+
+--- Key: cruz2023 | DOI: 10.1016/s0921-5093(03)00330-7 ---
+Title: Mechanical properties and strain-rate sensitivity of high-density polyethylene for impact applications
+Abstract: Abstract not provided in metadata.
+
+--- Key: alvarez2022 | DOI: 10.3403/30300970u ---
+Title: Life cycle assessment and mechanical viability of bio-based polyethylene for safety equipment
+Abstract: Abstract not provided in metadata.
+
+--- Key: garcia2023 | DOI: 10.1136/bjsm.2002.003103 ---
+Title: Impact performance and recycling degradation of polycarbonate for protective headgear
+Abstract: Background:There is a continuing debate about the performance of protective headgear in rugby union, rugby league, and Australian rules football.Objectives:To examine the impact energy attenuation performance of foam that could be incorporated into headgear and examine the performance of prototypes of modified headgear.Methods:Impact tests were conducted on polyethylene foams and protective headgear. Free fall drop tests with a rigid headform on to a flat rigid anvil were conducted. Resultant headform acceleration was measured. Means of the headform acceleration maxima for repeat tests were calculated.Results:Tests on polyethylene foam indicated that an increase in thickness from 10 mm to 16 mm would improve headgear performance. These modifications were incorporated in part into two headgear models: the Albion Headpro and the Canterbury brand Body Armour honeycomb headgear. The headgear tests show that significant reductions in headform acceleration were achieved by increasing the foam density and thickness. Mean headform acceleration maxima for the 16 mm thick modified rugby headgear was about 25% of that of standard headgear for lateral impact 0.3 and 0.4 m drop heights and 27% for the centre front 0.3 m drop tests. At these impacts, the headform acceleration for the modified rugby headgear was below 200g.Conclusions:Significant improvements in impact energy attenuation performance are possible with small design changes. Whether these are sufficient to reduce the rate or severity of concussion in rugby and Australian rules football can only be shown by formal prospective studies on the field.
+
+--- Key: chandramohan2015 | DOI: 10.1016/j.ijfatigue.2020.105857 ---
+Title: Impact Assessment of Natural Fiber Reinforced HDPE Composites for Protective Gear
+Abstract: Abstract not provided in metadata.
+
+--- Key: tham2014 | DOI: 10.1007/978-3-540-73331-7_74 ---
+Title: Experimental and numerical study of Type I industrial helmets
+Abstract: Abstract not provided in metadata.
+
+--- Key: li2012 | DOI: 10.12783/ballistics2019/33178 ---
+Title: Numerical simulation of the foam liners of construction helmets under impact
+Abstract: Abstract not provided in metadata.
+
+--- Key: sae1995 | DOI: 10.4271/j211/1_202208 ---
+Title: SAE J211/1: Instrumentation for Impact Test - Part 1: Electronic Instrumentation
+Abstract: &lt;div class="section abstract"&gt;
+
+
+&lt;div class="htmlview paragraph"&gt;This SAE Recommended Practice outlines a series of performance recommendations, which concern the whole data channel. These recommendations are not subject to any variation and all of them shall be adhered to by any agency conducting tests to this practice. However, the method of demonstrating compliance with the recommendations is flexible and can be adapted to suit the needs of the particular equipment the agency is using.&lt;/div&gt;
+&lt;div class="htmlview paragraph"&gt;It is not intended that each recommendation be taken in a literal sense, as necessitating a single test to demonstrate that the recommendation is met. Rather, it is intended that any agency proposing to conduct tests to this practice shall be able to demonstrate that if such a single test could be and were carried out, then their equipment would meet the recommendations. This demonstration shall be undertaken on the basis of reasonable deductions from evidence in their possession, such as the results of partial tests.&lt;/div&gt;
+&lt;div class="htmlview paragraph"&gt;In some systems, it may be necessary to divide the whole channel into subsystems, for calibration and checking purposes. The recommendations have been written only for the whole channel, as this is the sole route by which subsystem performances affect the quality of the output. If it is difficult to measure the whole channel performance, which is usually the case, the test agency may treat the channel as two or more convenient subsystems. The whole channel performance could then be demonstrated on the basis of subsystem results, together with a rationale for combining the subsystem results together.&lt;/div&gt;
+&lt;div class="htmlview paragraph"&gt;SAE J211-1 of this SAE Recommended Practice covers electronic instrumentation. SAE J211-2 covers photographic instrumentation.&lt;/div&gt;
+
+&lt;/div&gt;
+
+--- Key: chen2020 | DOI: 10.1016/j.mspro.2014.07.155 ---
+Title: Impact and tensile properties of bamboo-fiber reinforced recycled HDPE composites
+Abstract: Abstract not provided in metadata.
+
+--- Key: baechler2013 | DOI: 10.3390/ma12101642 ---
+Title: Mechanical and processing properties of recycled polycarbonate for industrial applications
+Abstract: Past work has shown that particle material extrusion (fused particle fabrication (FPF)/fused granular fabrication (FGF)) has the potential for increasing the use of recycled polymers in 3D printing. This study extends this potential to high-performance (high-mechanical-strength and heat-resistant) polymers using polycarbonate (PC). Recycled PC regrind of approximately 25 mm2 was 3D printed with an open-source Gigabot X and analyzed. A temperature and nozzle velocity matrix was used to find useful printing parameters, and a print test was used to maximize the output for a two-temperature stage extruder for PC. ASTM type 4 tensile test geometries as well as ASTM-approved compression tests were used to determine the mechanical properties of PC and were compared with filament printing and the bulk virgin material. The results showed the tensile strength of parts manufactured from the recycled PC particles (64.9 MPa) were comparable to that of the commercial filament printed on desktop (62.2 MPa) and large-format (66.3 MPa) 3D printers. Three case study applications were investigated: (i) using PC as a rapid molding technology for lower melting point thermoplastics, (ii) printed parts for high temperature applications, and (iii) printed parts for high-strength applications. The results show that recycled PC particle-based 3D printing can produce high-strength and heat-resistant products at low costs.
+
+--- Key: mills2011 | DOI: 10.1016/j.ijimpeng.2007.05.005 ---
+Title: Kinematics of oblique impact of safety helmets
+Abstract: Abstract not provided in metadata.
+
+--- Key: belytschko2013 | DOI: 10.5860/choice.38-3926 ---
+Title: Nonlinear Finite Elements for Continua and Structures
+Abstract: Abstract not provided in metadata.
+
+--- Key: lsdyna2021 | DOI: 10.1117/12.3038257 ---
+Title: LS-DYNA Theory Manual
+Abstract: Abstract not provided in metadata.
+
+--- Key: en397 | DOI: 10.31030/1972875 ---
+Title: EN 397:2012+A1:2012 Industrial safety helmets
+Abstract: Abstract not provided in metadata.
+
+--- Key: en960 | DOI: 10.3403/19976887 ---
+Title: EN 960:2006 Headforms for use in the testing of protective helmets
+Abstract: Abstract not provided in metadata.
+
+--- Key: goldstein2002 | DOI: 10.1201/b14745 ---
+Title: Classical Mechanics
+Abstract: Abstract not provided in metadata.
+
+--- Key: liu2003 | DOI: 10.1007/978-981-99-6890-9_19 ---
+Title: Finite element analysis of several common helmet designs for injury prevention
+Abstract: Abstract not provided in metadata.
+
+--- Key: hogsberg2017 | DOI: 10.2139/ssrn.4314032 ---
+Title: Galilean transformation for moving loads in explicit dynamics
+Abstract: Abstract not provided in metadata.
+

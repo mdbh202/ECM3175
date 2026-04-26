@@ -26,15 +26,16 @@
 \contentsline {section}{\numberline {5.2.}Phase 2: Macroscopic Force Transmission (EN 397)}{12}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1.}Benchmarking against Existing Data}{14}{subsection.5.2.1}%
 \contentsline {section}{\numberline {5.3.}Phase 3: Energy Absorption Kinematics}{14}{section.5.3}%
-\contentsline {section}{\numberline {5.4.}Phase 4: Kinematic Displacement and Structural Crush Depth}{15}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Discussion and Conclusions}{16}{chapter.6}%
-\contentsline {section}{\numberline {6.1.}Synthesis of Results and Comparative Analysis}{16}{section.6.1}%
-\contentsline {section}{\numberline {6.2.}Energy Absorption and Protective Mechanisms}{16}{section.6.2}%
-\contentsline {section}{\numberline {6.3.}Rotational Kinematics and Injury Risk Correlation}{16}{section.6.3}%
-\contentsline {section}{\numberline {6.4.}Discussion of Limitations and Validation Confidence}{17}{section.6.4}%
-\contentsline {section}{\numberline {6.5.}Conclusions}{17}{section.6.5}%
-\contentsline {section}{\numberline {6.6.}Future Work}{17}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Management, Sustainability, and Safety}{19}{chapter.7}%
-\contentsline {section}{\numberline {7.1.}Project Management}{19}{section.7.1}%
-\contentsline {section}{\numberline {7.2.}Sustainability and Life Cycle Considerations}{21}{section.7.2}%
-\contentsline {chapter}{References}{22}{chapter*.20}%
+\contentsline {section}{\numberline {5.4.}Phase 4: Kinematic Displacement and Structural Crush Depth}{16}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Discussion and Conclusions}{18}{chapter.6}%
+\contentsline {section}{\numberline {6.1.}Synthesis of Results and Comparative Analysis}{18}{section.6.1}%
+\contentsline {section}{\numberline {6.2.}Energy Absorption and Protective Mechanisms}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3.}Rotational Kinematics and Injury Risk Correlation}{19}{section.6.3}%
+\contentsline {section}{\numberline {6.4.}Discussion of Limitations and Validation Confidence}{19}{section.6.4}%
+\contentsline {section}{\numberline {6.5.}Conclusions}{19}{section.6.5}%
+\contentsline {section}{\numberline {6.6.}Future Work}{20}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Management, Sustainability, and Safety}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1.}Project Management}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2.}Sustainability and Life Cycle Considerations}{23}{section.7.2}%
+\contentsline {section}{\numberline {7.3.}Health and Safety and Risk Assessment}{23}{section.7.3}%
+\contentsline {chapter}{References}{25}{chapter*.25}%

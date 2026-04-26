@@ -134,20 +134,87 @@ energy.
 
 Recycled PC recorded 16.67 J of internal strain energy and 26.90 J of 
 residual kinetic energy. The contact friction energy ranged from 
-5.79 J to 6.47 J across all material models.
+5.79 J to 6.47 J across all material models. 
+
+The mechanical response to this energy partitioning is visible in the 
+resulting stress contours. Figure~\ref{fig:stress_contours} compares 
+the peak Von Mises stress distribution across the candidate materials, 
+illustrating the distinct load distribution mechanisms between 
+ductile and high-modulus shells.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{stress_top_hdpe.png}
+        \caption{Virgin HDPE}
+        \label{fig:stress_hdpe}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{stress_top_rpc.png}
+        \caption{Recycled PC}
+        \label{fig:stress_rpc}
+    \end{subfigure}
+    \vskip\baselineskip
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{stress_top_abs.png}
+        \caption{ABS Plastic}
+        \label{fig:stress_abs}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{stress_top_bamboo.png}
+        \caption{Bamboo-HDPE 30\%}
+        \label{fig:stress_bamboo}
+    \end{subfigure}
+    \caption{Peak Von Mises stress contours during top impact (EN 397). High-modulus shells (ABS, rPC) leverage higher flexural stiffness to distribute impact energy across a wider area of the EPS liner, while ductile materials (HDPE, Bamboo-HDPE) exhibit more localized stress concentrations at the impact site.}
+    \label{fig:stress_contours}
+\end{figure}
+
+The distribution of internal strain within the shell structure further 
+validates the energy absorption hierarchy. Figure~\ref{fig:strain_contours} 
+contrasts the localized plastic strain in the HDPE baseline with the 
+dispersed elastic strain in the rPC alternative.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{strain_section_hdpe.png}
+        \caption{Virgin HDPE (Localized strain)}
+        \label{fig:strain_hdpe}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{strain_section_rpc.png}
+        \caption{Recycled PC (Dispersed strain)}
+        \label{fig:strain_rpc}
+    \end{subfigure}
+    \caption{Cross-sectional internal strain distribution at peak impact. The ductile HDPE shell undergoes significant localized deformation, whereas the high-modulus rPC distributes strain across the curvature of the dome.}
+    \label{fig:strain_contours}
+\end{figure}
 
 \section{Phase 4: Kinematic Displacement and Structural Crush Depth}
 The final mechanical metric evaluated was the relative kinematic 
 displacement between the headform center of gravity and the helmet apex. 
 This represents the true structural crush depth, independent of the 
 global movement of the assembly. Results are summarized in 
-Table~\ref{tab:crush_depth} and Figure~\ref{fig:crush_depth_plot}.
+Table~\ref{tab:crush_depth} and Figure~\ref{fig:phase4_kinematics}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Phase5_CrushDepth.pdf} 
-    \caption{Relative kinematic displacement (crush depth) vs. time for Virgin HDPE and Recycled PC shells, illustrating the distinct stiffness responses.}
-    \label{fig:crush_depth_plot}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{Phase5_CrushDepth.pdf} 
+        \caption{Crush Depth vs. Time}
+        \label{fig:crush_depth_plot}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{Phase4_NormalStress.pdf} 
+        \caption{Peak Normal Stress}
+        \label{fig:normal_stress_plot}
+    \end{subfigure}
+    \caption{Kinematic and structural response during Phase 4: (a) relative kinematic displacement (crush depth) and (b) peak normal stress histories, illustrating the distinct stiffness responses between materials.}
+    \label{fig:phase4_kinematics}
 \end{figure}
 
 \begin{table}[H]
@@ -182,3 +249,15 @@ Table~\ref{tab:crush_depth} and Figure~\ref{fig:crush_depth_plot}.
         \bottomrule
     \end{tabularx}
 \end{table}
+
+The distinct kinematic responses in the oblique phase are driven by 
+localized surface deformation at the impact site. Figure~\ref{fig:oblique_stress} 
+shows the peak Von Mises stress distribution for the ABS model during 
+the 30-degree oblique impact, highlighting the primary contact mechanics.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{abs_oblique_stress_final.png}
+    \caption{Peak Von Mises stress distribution for the ABS Plastic shell during 30-degree oblique impact, demonstrating the localized stress concentration at the shell-anvil interface.}
+    \label{fig:oblique_stress}
+\end{figure}

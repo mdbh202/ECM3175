@@ -35,7 +35,25 @@ algorithms, a kinematic shift was implemented based on the principle of
 Galilean Invariance. Rather than a transient drop of a 5.0 kg mass onto a 
 stationary helmet, the rigid ``floor'' was modelled as a stationary ceiling. 
 The helmet and the 5.0 kg spherical headform assembly were grouped and 
-assigned a uniform upward initial velocity of 4.43 m/s. 
+assigned a uniform upward initial velocity of 4.43 m/s. Figure~\ref{fig:assembly_setup} 
+illustrates the numerical assembly and the kinematic boundary conditions.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{cad_impact_setup.png}
+        \caption{EN 397 Top Impact}
+        \label{fig:top_setup}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{model_30_oblique_setup.png}
+        \caption{30$^\circ$ Oblique Impact}
+        \label{fig:oblique_setup}
+    \end{subfigure}
+    \caption{Numerical assembly and impact configurations. The Galilean upward velocity shift is applied to the headform-helmet assembly against a stationary rigid boundary.}
+    \label{fig:assembly_setup}
+\end{figure}
 
 According to classical mechanics, the laws of motion are invariant in all 
 inertial reference frames related by a constant velocity shift~\cite{goldstein2002}. 
