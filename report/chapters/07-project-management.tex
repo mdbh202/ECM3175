@@ -5,34 +5,84 @@ Project management balanced the computational demands of LS-DYNA simulations wit
 
 A Gantt chart (Figure~\ref{fig:gantt}) tracked the project timeline and milestones, including the preliminary report and core parametric simulations. Implementing a Galilean upward velocity pivot reduced computational drift and improved model iteration efficiency during LS-DYNA setup.
 
+
+\section{Sustainability and Life Cycle Considerations}
+
+The mechanical viability of sustainable materials must be balanced against 
+their environmental footprint. Table~\ref{tab:lca} provides an indicative 
+lifecycle assessment (LCA) comparison based on literature data~\cite{yadav2024, alvarez2022}.
+
+\begin{table}[H]
+    \centering
+    \caption{Indicative Lifecycle Assessment (LCA) comparison of helmet 
+    shell materials. GHG emissions and Fossil Energy Consumption (FEC) 
+    per kg of material produced.}
+    \label{tab:lca}
+    \begin{tabularx}{\textwidth}{L C C C}
+        \toprule
+        \textbf{Material} & \textbf{GHG Emissions (kg CO$_2$e/kg)} & \textbf{FEC (MJ/kg)} & \textbf{Recyclability} \\
+        \midrule
+        Virgin HDPE & 1.9 & 70 & High \\
+        ABS Plastic & 2.1 & 80 & High \\
+        Bio-PE (Bio-based) & 1.0 & 29 & High \\
+        Recycled PC & 0.4 & 20 & High \\
+        Natural Fibre/HDPE & 1.3 & 40 & Moderate \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+The lifecycle assessment data clearly indicates that Recycled Polycarbonate (rPC) offers the most significant environmental benefits, reducing Greenhouse Gas (GHG) emissions by nearly 80\% and Fossil Energy Consumption (FEC) by over 70\% compared to Virgin HDPE and ABS. While Bio-based PE and Natural Fibre/HDPE composites also demonstrate substantial reductions in carbon footprint, the latter introduces challenges regarding end-of-life recyclability due to the heterogeneous nature of the composite matrix. Given that rPC successfully passed the EN 397 force transmission threshold and demonstrated superior rotational impact mitigation (as detailed in Chapter 5), it emerges as the optimal candidate for sustainable PPE manufacturing, effectively balancing stringent mechanical safety requirements with critical environmental sustainability goals.
+
+\section{Health and Safety and Risk Assessment}
+As this project is primarily computationally based, physical health and safety risks are limited to ergonomic and display screen equipment (DSE) hazards associated with prolonged computer use. To mitigate these risks, regular breaks were scheduled, and ergonomic workstation principles were adhered to in compliance with standard Health and Safety guidelines for DSE~\cite{hse_dse}.
+
+Beyond physical safety, the successful delivery of this computational project required proactive identification and mitigation of technical and operational risks. Table~\ref{tab:risk_register} details the formal Risk Register maintained throughout the project lifecycle.
+
+\begin{table}[H]
+    \centering
+    \caption{Project Risk Register detailing technical and operational risks associated with the FEA dissertation lifecycle.}
+    \label{tab:risk_register}
+    \begin{tabularx}{\textwidth}{>{\hsize=0.8\hsize}L c c >{\hsize=1.2\hsize}L}
+        \toprule
+        \textbf{Risk Event} & \textbf{Prob.} & \textbf{Impact} & \textbf{Mitigation Strategy} \\
+        \midrule
+        Simulation Divergence & Moderate & High & Implementation of Galilean upward velocity shift to stabilize contact interfaces. \\
+        Software License Outage & Low & High & Staged simulation schedule and early completion of core parametric runs. \\
+        Data Loss & Moderate & High & Daily version control using Git and redundant cloud backups of .k and .xlsx files. \\
+        Hardware Failure & Low & Mod. & Use of remote high-performance computing (HPC) resources for final runs. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
 \begin{landscape}
 \begin{figure}[H]
     \centering
     \begin{ganttchart}[
-        canvas/.append style={fill=none, draw=black!40, line width=.75pt},
-        hgrid={*1{black!5, solid}},
-        vgrid={*7{black!10, dotted}, *1{black!60, solid}},
+        canvas/.append style={fill=none, draw=black!20, line width=1pt},
+        hgrid={*1{black!10, solid}},
+        vgrid={*7{black!10, dotted}, *1{black!30, solid}},
         x unit=0.75mm,
         y unit title=0.7cm,
-        y unit chart=0.55cm,
+        y unit chart=0.6cm,
         time slot format=isodate,
-        title/.style={draw=none, fill=gray!15},
-        title label font=\footnotesize\bfseries,
-        bar/.append style={fill=blue!40!gray!60, draw=blue!40!black!80, line width=0.4pt},
-        bar height=0.65,
-        group/.append style={fill=black!15, draw=black!60, line width=0.8pt},
+        title/.style={draw=none, fill=black!5},
+        title label font=\sffamily\footnotesize\bfseries,
+        bar/.append style={fill=cyan!60!blue!50, draw=cyan!80!blue!80, rounded corners=2pt, line width=0.8pt},
+        bar height=0.55,
+        group/.append style={fill=black!60, draw=black!80, rounded corners=1.5pt, line width=0.8pt},
         group height=0.25,
         group right shift=0,
-        group top shift=0.6,
+        group top shift=0.55,
         group peaks tip position=0,
-        milestone/.append style={fill=red!70!black, draw=red!70!black, shape=diamond},
-        link/.style={-latex, line width=0.5pt, black!50},
-        bar label font=\scriptsize\color{black!90},
-        group label font=\scriptsize\bfseries,
-        milestone label font=\scriptsize\itshape\color{red!40!black},
+        milestone/.append style={fill=orange!80!red, draw=none, shape=diamond},
+        milestone height=0.5,
+        link/.style={-latex, line width=1pt, gray!60, rounded corners=2pt},
+        bar label font=\sffamily\scriptsize\color{black!80},
+        group label font=\sffamily\scriptsize\bfseries\color{black!90},
+        milestone label font=\sffamily\scriptsize\itshape\color{orange!80!red},
         include title in canvas=false
     ]{2025-10-01}{2026-05-31}
-        \gantttitlecalendar{year, month} \\
+        \gantttitlecalendar{year, month=shortname} \\
         
         % 1: RESEARCH
         \ganttgroup{1: Research \& Technical Initiation}{2025-10-01}{2025-11-30} \\
@@ -63,7 +113,7 @@ A Gantt chart (Figure~\ref{fig:gantt}) tracked the project timeline and mileston
         \ganttbar[name=write]{Writing Intro, Lit Review \& Methodology}{2026-01-12}{2026-03-20} \\
         \ganttbar[name=res]{Synthesis of Results \& Discussion}{2026-03-21}{2026-04-15} \\
         \ganttbar[name=final]{Final Review, Audit \& Formatting}{2026-04-16}{2026-05-01} \\
-        \ganttmilestone[name=m3]{FINAL DISSERTATION SUBMISSION}{2026-05-01} \\
+        \ganttmilestone[name=m3]{FINAL SUBMISSION}{2026-05-01} \\
 
         % Dependencies (Logical Links)
         \ganttlink{lit}{m1}
@@ -78,53 +128,7 @@ A Gantt chart (Figure~\ref{fig:gantt}) tracked the project timeline and mileston
         \ganttlink{res}{final}
         \ganttlink{final}{m3}
     \end{ganttchart}
-    \caption{Detailed Project Gantt Chart (Oct 2025 -- May 2026) demonstrating the engineering workflow, task dependencies, and the integrated Winter Break period.}
+    \caption{Project Gantt Chart (Oct 2025 -- May 2026)}
     \label{fig:gantt}
 \end{figure}
 \end{landscape}
-
-\section{Sustainability and Life Cycle Considerations}
-
-The mechanical viability of sustainable materials must be balanced against 
-their environmental footprint. Table~\ref{tab:lca} provides an indicative 
-lifecycle assessment (LCA) comparison based on literature data~\cite{yadav2024, alvarez2022}.
-
-\begin{table}[H]
-    \centering
-    \caption{Indicative Lifecycle Assessment (LCA) comparison of helmet 
-    shell materials. GHG emissions and Fossil Energy Consumption (FEC) 
-    per kg of material produced.}
-    \label{tab:lca}
-    \begin{tabularx}{\textwidth}{L C C C}
-        \toprule
-        \textbf{Material} & \textbf{GHG Emissions (kg CO$_2$e/kg)} & \textbf{FEC (MJ/kg)} & \textbf{Recyclability} \\
-        \midrule
-        Virgin HDPE & 1.9 & 70 & High \\
-        ABS Plastic & 2.1 & 80 & High \\
-        Bio-PE (Bio-based) & 1.0 & 29 & High \\
-        Recycled PC & 0.4 & 20 & High \\
-        Natural Fibre/HDPE & 1.3 & 40 & Moderate \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\section{Health and Safety and Risk Assessment}
-As this project is primarily computationally based, physical health and safety risks are limited to ergonomic and display screen equipment (DSE) hazards associated with prolonged computer use. To mitigate these risks, regular breaks were scheduled, and ergonomic workstation principles were adhered to in compliance with standard Health and Safety guidelines for DSE.
-
-Beyond physical safety, the successful delivery of this computational project required proactive identification and mitigation of technical and operational risks. Table~\ref{tab:risk_register} details the formal Risk Register maintained throughout the project lifecycle.
-
-\begin{table}[H]
-    \centering
-    \caption{Project Risk Register detailing technical and operational risks associated with the FEA dissertation lifecycle.}
-    \label{tab:risk_register}
-    \begin{tabularx}{\textwidth}{>{\hsize=0.8\hsize}L c c >{\hsize=1.2\hsize}L}
-        \toprule
-        \textbf{Risk Event} & \textbf{Prob.} & \textbf{Impact} & \textbf{Mitigation Strategy} \\
-        \midrule
-        Simulation Divergence & Moderate & High & Implementation of Galilean upward velocity shift to stabilize contact interfaces. \\
-        Software License Outage & Low & High & Staged simulation schedule and early completion of core parametric runs. \\
-        Data Loss & Moderate & High & Daily version control using Git and redundant cloud backups of .k and .xlsx files. \\
-        Hardware Failure & Low & Mod. & Use of remote high-performance computing (HPC) resources for final runs. \\
-        \bottomrule
-    \end{tabularx}
-\end{table}

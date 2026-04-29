@@ -71,3 +71,18 @@ impact duration in these simulations is extremely short ($\approx 8$--10 ms),
 the additional acceleration due to gravity ($g = 9.81$ m/s$^2$) during the 
 contact phase contributes less than 0.2\% to the total impulse and can be 
 safely neglected in favor of contact stability and domain optimization.
+
+\section{Contact Mechanics and the Penalty Formulation}
+The interaction between the helmet shell, the EPS liner, and the rigid headform was governed by LS-DYNA's \texttt{*AUTOMATIC\_SURFACE\_TO\_SURFACE} algorithm. To prevent non-physical nodal penetration, this algorithm employs a penalty-based formulation. When a slave node penetrates a master segment, an elastic compression-only spring is dynamically instantiated between them to resist the penetration~\cite{belytschko1992}.
+
+The contact force vector, $\mathbf{F}_c$, applied to the penetrating node is proportional to the penetration depth, $\delta$:
+\begin{equation}
+    \mathbf{F}_c = k_c \cdot \delta \cdot \mathbf{n}
+\end{equation}
+where $\mathbf{n}$ is the unit normal vector of the master segment, and $k_c$ is the interface contact stiffness. For solid elements, LS-DYNA derives this stiffness based on the bulk modulus of the interacting materials:
+\begin{equation}
+    k_c = \frac{f_s \cdot K \cdot A}{V}
+\end{equation}
+where $K$ is the bulk modulus of the slave element, $A$ is the segment face area, $V$ is the element volume, and $f_s$ is the penalty scale factor~\cite{lsdyna_theory}. 
+
+In this investigation, a penalty scale factor ($f_s$) of 0.1 was utilized. This value optimizes the balance between enforcing kinematic constraints (preventing unphysical mesh overlap) and maintaining thermodynamic stability. Higher penalty factors artificially stiffen the contact interface, potentially driving the required explicit time-step below the Courant-Friedrichs-Lewy (CFL) stability limit and inducing catastrophic high-frequency noise.

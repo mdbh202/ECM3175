@@ -11,11 +11,10 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{cad_section_liner.png} 
-    \caption{Section view of the CAD assembly detailing the interface between the exterior polymer shell and the internal EPS energy-absorbing liner.}
+    \includegraphics[width=0.7\textwidth]{cad_section_liner.png}
+    \caption{Section view of the CAD assembly detailing the interface between the exterior polymer shell (yellow), the internal EPS energy-absorbing liner (blue), and the rigid headform (gray).}
     \label{fig:cad_section_liner}
 \end{figure}
-
 The simulations were executed using the LS-DYNA explicit time integration 
 solver within ANSYS Workbench. As defined by the kinematic methodology in 
 Section 3.2, the standardised construction helmet dome geometry was modelled 
@@ -27,6 +26,17 @@ This simplification ensures contact stability at the liner interface and
 provides a consistent kinematic reference point for force transmission 
 maintain the exact mass parity required by the EN 397 
 impact standard.
+
+\section{Constitutive Material Modelling}
+Accurate FEA of transient impacts requires robust constitutive models that capture both the elastic and post-yield behavior of the polymers. 
+
+\subsection{Thermoplastic Shells (\texttt{*MAT\_024})}
+The outer structural shells (Virgin HDPE, ABS, Bamboo-HDPE, and Recycled PC) were modelled using LS-DYNA's \texttt{*MAT\_PIECEWISE\_LINEAR\_PLASTICITY} (\texttt{*MAT\_024})~\cite{lsdyna_keyword}. This constitutes an elasto-plastic material model that evaluates yielding based on the von Mises criterion. The model relies on the input of a defined yield stress ($\sigma_y$) and an arbitrary isotropic hardening curve, which was approximated using the Tangent Modulus ($E_{tan}$). For stress states exceeding the yield threshold, the flow rule allows for permanent plastic deformation while maintaining volume constancy (incompressibility in the plastic domain). This model is highly effective for thin-walled structures undergoing localized yielding, as observed in the HDPE drop tests.
+
+\subsection{Energy-Absorbing Liner (\texttt{*MAT\_063})}
+The Expanded Polystyrene (EPS) liner required a fundamentally different mathematical approach. Unlike the incompressible plastic flow of the shell, foams undergo massive permanent volumetric reduction. Consequently, the liner was modelled using \texttt{*MAT\_CRUSHABLE\_FOAM} (\texttt{*MAT\_063})~\cite{lsdyna_keyword}. This model decouples the volumetric and deviatoric responses. 
+
+The compressive behavior is governed by a user-defined stress versus volumetric strain curve. Volumetric strain is defined directly by relative volume compaction ($\varepsilon_v = 1 - V/V_0$). Unloading is treated as purely elastic up to a specified tension cut-off, reflecting the physical reality that EPS foam absorbs energy through irreversible cellular collapse but provides minimal resistance to tensile forces.
 
 \section{Mesh Convergence Study}
 
@@ -72,35 +82,37 @@ To ensure the reliability of the explicit dynamics results, the mesh quality was
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.32\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{skewness.png}
         \caption{Skewness}
         \label{fig:mesh_skewness}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.32\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{orthogonal_quality.png}
         \caption{Orthogonal Quality}
         \label{fig:mesh_ortho}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.32\textwidth}
+    
+    \vspace{10pt}
+    
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{aspect_ratio.png}
         \caption{Aspect Ratio}
         \label{fig:mesh_aspect}
     \end{subfigure}
-    \caption{Mesh quality distribution for the 2 mm helmet model. The majority of elements maintain an orthogonal quality above 0.8 and a skewness below 0.3, ensuring high numerical accuracy.}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{element_ratio.png}
+        \caption{Element Ratio}
+        \label{fig:element_ratio}
+    \end{subfigure}
+    \caption{Mesh quality distribution for the 2 mm helmet model. The majority of elements maintain an orthogonal quality above 0.8 and a skewness below 0.3, ensuring high numerical accuracy. The element ratio confirms the dominance of high-quality quadrilaterals in the impact zone.}
     \label{fig:mesh_quality}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{element_ratio.png}
-    \caption{Mesh element ratio distribution, confirming the dominance of high-quality quadrilaterals in the impact zone.}
-    \label{fig:element_ratio}
 \end{figure}
 
 \section{Contact Parameters and Interaction}
@@ -121,7 +133,7 @@ simulations are summarized in Table~\ref{tab:material_props}.
 
 \begin{table}[H]
     \centering
-    \caption{Material properties assigned to the helmet shell FEA models. 
+    \caption[Material properties assigned to the helmet shell FEA models.]{Material properties assigned to the helmet shell FEA models. 
     Values for conventional materials sourced from~\cite{cruz2023} and 
     sustainable alternatives derived from~\cite{chandramohan2015, yadav2024}.}
     \label{tab:material_props}

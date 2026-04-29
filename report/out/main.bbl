@@ -57,6 +57,15 @@ Ansys.
   \href {https://doi.org/10.4271/j211/1_202208}
   {\path{doi:10.4271/j211/1_202208}}.
 
+\bibitem{zhang2017}
+J.~Zhang, N.~Yoganandan, F.~A. Pintar, and Y.~Guan.
+\newblock Finite element simulations of the head--brain responses to the top
+  impacts of a construction helmet: Effects of the neck and body mass.
+\newblock {\em International Journal for Numerical Methods in Biomedical
+  Engineering}, 33(12):e2875, 2017.
+\newblock \href {https://doi.org/10.1002/cnm.2875}
+  {\path{doi:10.1002/cnm.2875}}.
+
 \bibitem{wu2022}
 J.~Z. Wu et~al.
 \newblock Evaluation of the fall protection of type i industrial helmets.
@@ -120,6 +129,21 @@ N.~J. Mills.
 \newblock \href {https://doi.org/10.1016/j.ijimpeng.2007.05.005}
   {\path{doi:10.1016/j.ijimpeng.2007.05.005}}.
 
+\bibitem{mills2009}
+N.~J. Mills, S.~Wilkes, S.~Derler, and A.~Flisch.
+\newblock Fea of oblique impact tests on a motorcycle helmet.
+\newblock {\em International Journal of Impact Engineering}, 36(7):913--925,
+  2009.
+\newblock \href {https://doi.org/10.1016/j.ijimpeng.2008.12.011}
+  {\path{doi:10.1016/j.ijimpeng.2008.12.011}}.
+
+\bibitem{ghajari2011}
+M.~Ghajari, S.~Peldschus, U.~Galvanetto, and L.~Iannucci.
+\newblock Effects of the presence of the body in helmet oblique impacts.
+\newblock {\em Accident Analysis \& Prevention}, 43(4):1492--1499, 2011.
+\newblock \href {https://doi.org/10.1016/j.aap.2011.02.028}
+  {\path{doi:10.1016/j.aap.2011.02.028}}.
+
 \bibitem{belytschko2013}
 T.~Belytschko et~al.
 \newblock {\em Nonlinear Finite Elements for Continua and Structures}.
@@ -149,6 +173,26 @@ J.~H{\o}gsberg and N.~L. Pedersen.
   Mechanics}, 2017.
 \newblock \href {https://doi.org/10.2139/ssrn.4314032}
   {\path{doi:10.2139/ssrn.4314032}}.
+
+\bibitem{belytschko1992}
+T.~Belytschko and M.~O. Neal.
+\newblock High performance algorithms for the solution of general
+  contact-impact problems.
+\newblock {\em Nuclear Engineering and Design}, 138(1):65--74, 1992.
+\newblock \href {https://doi.org/10.1016/0029-5493(92)90279-5}
+  {\path{doi:10.1016/0029-5493(92)90279-5}}.
+
+\bibitem{lsdyna_theory}
+J.~O. Hallquist.
+\newblock {\em LS-DYNA Theory Manual}.
+\newblock Livermore Software Technology Corporation (LSTC), 2006.
+\newblock URL:
+  \url{https://ftp.lstc.com/anonymous/outgoing/jday/manuals/LS-DYNA_Theory_Manual_2006.pdf}.
+
+\bibitem{lsdyna_keyword}
+Livermore Software Technology Corporation (LSTC).
+\newblock {\em LS-DYNA Keyword User's Manual}, 2021.
+\newblock URL: \url{https://lsdyna.ansys.com/}.
 
 \bibitem{tham2014}
 C.~Y. Tham et~al.
@@ -181,5 +225,11 @@ M.~J. Reich et~al.
 \newblock {\em Materials}, 12(10):1642, 2019.
 \newblock \href {https://doi.org/10.3390/ma12101642}
   {\path{doi:10.3390/ma12101642}}.
+
+\bibitem{hse_dse}
+{Health and Safety Executive}.
+\newblock Working with display screen equipment (dse).
+\newblock Technical report, UK Government, 2022.
+\newblock URL: \url{https://www.hse.gov.uk/msd/dse/}.
 
 \end{thebibliography}
