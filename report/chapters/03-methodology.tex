@@ -26,7 +26,7 @@ The central difference method is conditionally stable. The time step $\Delta t$ 
 \begin{equation}
     \Delta t \leq \Delta t_{crit} = \frac{L_{min}}{c}
 \end{equation}
-where $L_{min}$ is the characteristic length of the smallest element in the mesh and $c$ is the local speed of sound in the material ($c = \sqrt{E/\rho}$). For this study, the 2 mm mesh resolution at the crown impact zone dictates the global time step, ensuring that the stress wave propagation is accurately captured during the 49 J impact.
+where $L_{min}$ is the characteristic length of the smallest element in the mesh and $c$ is the local speed of sound in the material ($c = \sqrt{E/\rho}$). For this study, the 2~mm mesh resolution at the helmet crown dictated a critical global time-step of approximately $0.42~\mu s$. Consequently, simulating the brief 10 millisecond physical impact event required over 23,000 computational cycles, highlighting the heavy computational expense inherent to explicit dynamics.
 
 \section{Unit System and Numerical Consistency}
 A consistent [kg, mm, s] unit set was adopted for LS-DYNA stability. Strength and contact pressure are reported in kg/mm$^2$ ($1 \text{ kg/mm}^2 \approx 9.81 \text{ MPa}$), while Young’s ($E$) and Tangent ($E_{tan}$) Moduli are in GPa. Transmitted forces and impact energy use kN and J, respectively.
@@ -60,8 +60,8 @@ inertial reference frames related by a constant velocity shift~\cite{goldstein20
 In explicit finite element analysis, this transformation is a standard 
 technique to isolate the impact event from free-flight processing time, 
 provided that the element formulations are objectively invariant 
-\cite{lsdyna2021, belytschko2013}. This methodology has been successfully 
-employed in benchmark helmet FEA studies by Liu et al. \cite{liu2003} and 
+\cite{lsdyna2021, belytschko2013}. This approach was applied 
+in benchmark helmet FEA studies by Liu et al. \cite{liu2003} and 
 more recently in moving-load impact scenarios by Høgsberg and Pedersen 
 \cite{hogsberg2017}. 
 
@@ -85,4 +85,5 @@ where $\mathbf{n}$ is the unit normal vector of the master segment, and $k_c$ is
 \end{equation}
 where $K$ is the bulk modulus of the slave element, $A$ is the segment face area, $V$ is the element volume, and $f_s$ is the penalty scale factor~\cite{lsdyna_theory}. 
 
-In this investigation, a penalty scale factor ($f_s$) of 0.1 was utilized. This value optimizes the balance between enforcing kinematic constraints (preventing unphysical mesh overlap) and maintaining thermodynamic stability. Higher penalty factors artificially stiffen the contact interface, potentially driving the required explicit time-step below the Courant-Friedrichs-Lewy (CFL) stability limit and inducing catastrophic high-frequency noise.
+In this investigation, a penalty scale factor ($f_s$) of 0.1 was applied. This value balances the enforcement of kinematic constraints (preventing unphysical mesh overlap) with thermodynamic stability. Higher penalty factors artificially stiffen the contact interface, potentially driving the required explicit time-step below the Courant-Friedrichs-Lewy (CFL) stability limit and inducing catastrophic high-frequency noise.
+contact interface, potentially driving the required explicit time-step below the Courant-Friedrichs-Lewy (CFL) stability limit and inducing catastrophic high-frequency noise.

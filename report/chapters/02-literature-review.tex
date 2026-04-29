@@ -12,7 +12,7 @@ non-linear cell crushing. Research indicates that standard HDPE shells
 experience peak stresses of 2.55--3.57 kg/mm$^2$ with moderate deformation, while ABS 
 shells undergo peak stresses of 3.06--4.59 kg/mm$^2$ due to their higher stiffness.
 
-A fundamental challenge in standardizing FEA for helmet impacts is the selection of the headform boundary condition. While EN 397 and EN 960 mandate the use of standardized rigid aluminium headforms to ensure test repeatability, this simplification explicitly neglects the biomechanical compliance of the human skull and cervical spine. Studies utilizing highly biofidelic models, such as those by Zhang et al.~\cite{zhang2017}, demonstrate that rigid headforms consistently over-predict peak transmitted forces compared to deformable human surrogates. However, introducing deformable surrogates into comparative material studies introduces complex, non-linear variables (such as cerebrospinal fluid damping) that can obscure the isolated mechanical performance of the polymer shell. Consequently, while rigid headforms present a conservative, ``worst-case'' boundary condition, their use is justified for isolating the structural stiffness and energy partitioning of novel materials without biological convolution.
+A fundamental challenge in standardizing FEA for helmet impacts is the selection of the headform boundary condition. While EN 397 and EN 960 mandate the use of standardized rigid aluminium headforms to ensure test repeatability, this simplification explicitly neglects the biomechanical compliance of the human skull and cervical spine. Studies utilizing highly biofidelic models, such as those by Zhang et al.~\cite{zhang2017}, demonstrate that rigid headforms consistently over-predict peak transmitted forces compared to deformable human surrogates. However, introducing deformable surrogates into comparative material studies introduces complex, non-linear variables (such as cerebrospinal fluid damping) that can obscure the isolated mechanical performance of the polymer shell. Rigid headforms present a conservative, ``worst-case'' boundary condition, and their use is justified for isolating the structural stiffness and energy partitioning of novel materials without biological convolution.
 
 While Wu et al. \cite{wu2022} report that helmet shells remain primarily 
 within elastic deformation limits (strains of 4\%--6.3\%), there is 
@@ -20,8 +20,8 @@ substantial uncertainty regarding material response under high-strain-rate
 impact loading. Specifically, the energy absorption capacity is fundamentally 
 dictated by the material's elastic modulus; however, the transition from 
 structural yielding in ductile materials to load distribution in stiff 
-materials is often treated as a binary mechanism. This study identifies a 
-critical gap in understanding how this transition influences transmitted 
+materials is often treated as a binary mechanism. This study examines 
+how this transition influences transmitted 
 impulse when sustainable, non-conventional polymers are introduced.
 
 \section{Conventional Material Properties}
@@ -73,7 +73,7 @@ environment of an industrial impact.
 
 While explicit FEA has benchmarked conventional safety helmets~\cite{long2015, wu2022}, 
 sustainable alternatives lack a validated high-velocity performance baseline. 
-This investigation addresses this critical deficiency by establishing a 
+This investigation establishes a 
 comparative framework to quantify their kinetics and regulatory compliance 
 under EN 397 transient loading, explicitly accounting for the uncertainties 
 identified in existing literature.
@@ -81,4 +81,4 @@ identified in existing literature.
 \section{Oblique Impact and Rotational Kinematics}
 The current EN 397 standard focuses exclusively on linear crown impacts, ignoring the tangential forces generated during off-axis collisions. Oblique impacts induce rotational acceleration, which is clinically recognized as the primary mechanism for Diffuse Axonal Injury (DAI) and severe concussions. Research into motorcycle and equestrian helmets by Mills et al.~\cite{mills2009} and Ghajari et al.~\cite{ghajari2011} confirms that rotational torque is heavily dependent on the coefficient of friction at the helmet-anvil interface and the flexural rigidity of the shell. 
 
-While sports and high-velocity transit helmets have seen extensive oblique FEA modelling, industrial safety helmets remain critically under-analyzed in this domain. Furthermore, the introduction of sustainable composites introduces unknown frictional and deformation characteristics that could exacerbate rotational hazards. A key objective of this investigation is to bridge this gap by applying oblique impact methodologies to industrial helmet profiles, quantifying how the structural modulus of recycled polymers (such as rPC) mitigates or amplifies rotational kinematics compared to conventional ductile thermoplastics.
+While sports and high-velocity transit helmets have seen extensive oblique FEA modelling, industrial safety helmets remain critically under-analyzed in this domain. The introduction of sustainable composites introduces unknown frictional and deformation characteristics that could exacerbate rotational hazards. A key objective of this investigation is to bridge this gap by applying oblique impact methodologies to industrial helmet profiles, quantifying how the structural modulus of recycled polymers (such as rPC) mitigates or amplifies rotational kinematics compared to conventional ductile thermoplastics.

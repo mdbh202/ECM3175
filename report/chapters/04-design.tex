@@ -28,19 +28,19 @@ maintain the exact mass parity required by the EN 397
 impact standard.
 
 \section{Constitutive Material Modelling}
-Accurate FEA of transient impacts requires robust constitutive models that capture both the elastic and post-yield behavior of the polymers. 
+Accurate FEA of transient impacts requires constitutive models capable of capturing both the elastic and post-yield behavior of the polymers. 
 
 \subsection{Thermoplastic Shells (\texttt{*MAT\_024})}
 The outer structural shells (Virgin HDPE, ABS, Bamboo-HDPE, and Recycled PC) were modelled using LS-DYNA's \texttt{*MAT\_PIECEWISE\_LINEAR\_PLASTICITY} (\texttt{*MAT\_024})~\cite{lsdyna_keyword}. This constitutes an elasto-plastic material model that evaluates yielding based on the von Mises criterion. The model relies on the input of a defined yield stress ($\sigma_y$) and an arbitrary isotropic hardening curve, which was approximated using the Tangent Modulus ($E_{tan}$). For stress states exceeding the yield threshold, the flow rule allows for permanent plastic deformation while maintaining volume constancy (incompressibility in the plastic domain). This model is highly effective for thin-walled structures undergoing localized yielding, as observed in the HDPE drop tests.
 
 \subsection{Energy-Absorbing Liner (\texttt{*MAT\_063})}
-The Expanded Polystyrene (EPS) liner required a fundamentally different mathematical approach. Unlike the incompressible plastic flow of the shell, foams undergo massive permanent volumetric reduction. Consequently, the liner was modelled using \texttt{*MAT\_CRUSHABLE\_FOAM} (\texttt{*MAT\_063})~\cite{lsdyna_keyword}. This model decouples the volumetric and deviatoric responses. 
+The Expanded Polystyrene (EPS) liner required a fundamentally different mathematical approach. Unlike the incompressible plastic flow of the shell, foams undergo massive permanent volumetric reduction. The liner was modelled using \texttt{*MAT\_CRUSHABLE\_FOAM} (\texttt{*MAT\_063})~\cite{lsdyna_keyword}. This model calculates volume compression separately from shape distortion. 
 
-The compressive behavior is governed by a user-defined stress versus volumetric strain curve. Volumetric strain is defined directly by relative volume compaction ($\varepsilon_v = 1 - V/V_0$). Unloading is treated as purely elastic up to a specified tension cut-off, reflecting the physical reality that EPS foam absorbs energy through irreversible cellular collapse but provides minimal resistance to tensile forces.
+The compressive behavior is governed by a user-defined stress versus volumetric strain curve. Volumetric strain is defined directly by relative volume compaction ($\varepsilon_v = 1 - V/V_0$). Unloading is treated as purely elastic up to a specified tension cut-off. For this EN 397 simulation, this reflects the physical reality that the EPS liner absorbs the headform's kinetic energy through irreversible cellular collapse during the primary crush phase, but provides minimal structural resistance during the subsequent elastic rebound.
 
 \section{Mesh Convergence Study}
 
-A mesh convergence study was performed on the Virgin HDPE baseline model to ensure that the results were independent of the spatial discretization. Five different element sizes were evaluated (6~mm, 5~mm, 4~mm, 3~mm, and 2~mm), with the peak equivalent stress monitored as the primary convergence metric. The model predominantly utilizes linear 4-node shell elements with Belytschko-Tsay integration and viscous hourglass control (Type 4) to maintain thermodynamic stability during the high-velocity impact~\cite{belytschko2013, lsdyna2021}.
+A mesh convergence study was performed on the Virgin HDPE baseline model to ensure that the results were independent of the spatial discretization. Five different element sizes were evaluated (6~mm, 5~mm, 4~mm, 3~mm, and 2~mm), with the peak equivalent stress monitored as the primary convergence metric. The model predominantly uses linear 4-node shell elements with Belytschko-Tsay integration and viscous hourglass control (Type 4) to maintain thermodynamic stability during the high-velocity impact~\cite{belytschko2013, lsdyna2021}.
 
 As shown in Table~\ref{tab:mesh_convergence} and Figure~\ref{fig:convergence}, the maximum equivalent stress stabilized as the element size was reduced. The transition from 3~mm to 2~mm resulted in a change of 5.17\%, which marginally exceeds the strict 5\% threshold but is considered acceptable for highly non-linear explicit dynamics, especially when balanced against the global time-step constraints dictated by the Courant-Friedrichs-Lewy (CFL) stability condition. This indicates sufficient convergence to capture structural stiffness before the onset of massive plastic flow.
 
@@ -172,17 +172,12 @@ with a cutoff frequency of 100 Hz. The filter was applied bidirectionally
 with the SAE J211 standard requirement for crash test data processing.
 
 \subsection{Signal Processing Refinements}
-The raw explicit data initially generated non-physical 
-nodal acceleration spikes. These spikes are a known numerical 
-artefact of explicit penalty contact formulations, where stress 
-waves artificially reflect through rigid bodies. Rather than classifying these as 
-structural failures, an SAE J211 low-pass filter was applied. 
-
+The raw explicit data initially generated non-physical nodal acceleration spikes. Prior to filtering, the raw deceleration data exhibited severe high-frequency ringing. This was a direct artefact of the explicit penalty contact forces echoing between the rigid 5.0~kg headform and the inner surface of the EPS liner, where stress waves artificially reflect through the rigid elements. Rather than classifying these momentary numerical spikes as structural failures, the 100 Hz cutoff was essential to extract the true macroscopic force required to evaluate the 5.0~kN EN 397 threshold.
 Because the raw ANSYS data was sampled at 1000 Hz, a CFC 60 filter (100 Hz 
 cutoff) was applied, adhering to the Nyquist--Shannon limit, to 
-successfully isolate the true macroscopic deceleration curve.
+isolate the true macroscopic deceleration curve.
 
 Deformation tracking was also corrected to measure the \textit{relative} 
 kinematic displacement between the headform's centre of gravity and the 
-helmet apex, yielding the true structural crush depth rather than global 
+helmet apex, providing the structural crush depth rather than global 
 absolute movement.
